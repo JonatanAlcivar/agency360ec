@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios, Tiempos y Requisitos | Agency360ec</title>
+    <style>
+        :root {
+            --primary: #0f172a;
+            --secondary: #2563eb;
+            --accent: #0ea5e9;
+            --success: #22c55e;
+            --warning: #f59e0b;
+            --bg-body: #f1f5f9;
+            --bg-card: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', -apple-system, system-ui, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 0;
+        }
+
+        .top-bar {
+            background: var(--primary);
+            color: white;
+            padding: 10px 20px;
+            font-size: 0.85rem;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 15px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .top-bar a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, var(--primary) 0%, #1e293b 100%);
+            color: white;
+            border-radius: 16px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
+        }
+
+        .badge-info {
+            display: inline-block;
+            background: rgba(255,255,255,0.1);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-top: 10px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+        }
+
+        .card-header {
+            background: #f8fafc;
+            padding: 20px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .card-header h3 {
+            color: var(--secondary);
+            font-size: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .content-section {
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        .info-tag {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+            padding: 8px 12px;
+            background: #eff6ff;
+            color: var(--secondary);
+            border-radius: 6px;
+            font-weight: 600;
+        }
+
+        .pricing-list {
+            margin-bottom: 20px;
+        }
+
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .price-tag {
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .requirements-box {
+            background: #fffbeb;
+            border: 1px solid #fef3c7;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .requirements-box h4 {
+            font-size: 0.85rem;
+            color: #92400e;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .requirements-list {
+            list-style: none;
+            font-size: 0.85rem;
+            color: #78350f;
+        }
+
+        .requirements-list li::before {
+            content: "•";
+            margin-right: 5px;
+            color: var(--warning);
+        }
+
+        .workflow-section {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            margin: 40px 0;
+            border: 1px solid var(--border);
+        }
+
+        .workflow-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .step {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-num {
+            width: 40px;
+            height: 40px;
+            background: var(--secondary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-weight: bold;
+        }
+
+        .contact-footer {
+            background: var(--primary);
+            color: white;
+            padding: 60px 20px;
+            border-radius: 16px;
+            text-align: center;
+        }
+
+        .contact-footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .whatsapp-cta {
+            background: var(--success);
+            color: white !important;
+            padding: 18px 45px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 800;
+            display: inline-block;
+            font-size: 1.1rem;
+            margin-top: 30px;
+            box-shadow: 0 10px 15px -3px rgba(34, 197, 94, 0.4);
+            transition: transform 0.2s;
+        }
+
+        .whatsapp-cta:hover {
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 600px) {
+            .grid { grid-template-columns: 1fr; }
+            .top-bar { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="top-bar">
+    <span>📧 Email: <a href="mailto:infor@disenoweb.agencia">infor@disenoweb.agencia</a></span>
+    <span>📱 WhatsApp: <a href="https://wa.me/593988305139" target="_blank">098 830 5139</a></span>
+</div>
+
+<div class="container">
+    <header>
+        <h1>Agency360ec</h1>
+        <p>Expertos en Growth Marketing e Inteligencia Artificial</p>
+        <div class="badge-info">Precios transparentes • Tiempos reales • Metodología Ágil</div>
+    </header>
+
+    <!-- FLUJO DE TRABAJO -->
+    <section class="workflow-section">
+        <h2 style="text-align: center; color: var(--primary);">Nuestro Proceso de Trabajo</h2>
+        <div class="workflow-grid">
+            <div class="step">
+                <div class="step-num">1</div>
+                <h4>Briefing</h4>
+                <p style="font-size: 0.85rem; color: var(--text-muted);">Entrevista inicial y recolección de materiales.</p>
+            </div>
+            <div class="step">
+                <div class="step-num">2</div>
+                <h4>Estrategia</h4>
+                <p style="font-size: 0.85rem; color: var(--text-muted);">Planificación táctica y propuesta creativa.</p>
+            </div>
+            <div class="step">
+                <div class="step-num">3</div>
+                <h4>Ejecución</h4>
+                <p style="font-size: 0.85rem; color: var(--text-muted);">Desarrollo técnico y producción de activos.</p>
+            </div>
+            <div class="step">
+                <div class="step-num">4</div>
+                <h4>Entrega</h4>
+                <p style="font-size: 0.85rem; color: var(--text-muted);">Revisión final, ajustes y lanzamiento oficial.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="grid">
+        <!-- DESARROLLO WEB -->
+        <article class="card">
+            <div class="card-header"><h3>💻 Desarrollo Web</h3></div>
+            <div class="content-section">
+                <div class="info-tag">⏱ Plazo: 10 a 25 días hábiles</div>
+                <div class="pricing-list">
+                    <div class="price-row"><span>Landing Page</span><span class="price-tag">$150 - $250</span></div>
+                    <div class="price-row"><span>Web Informativa</span><span class="price-tag">$350 - $500</span></div>
+                    <div class="price-row"><span>E-commerce</span><span class="price-tag">$800 - $1.500+</span></div>
+                </div>
+                <div class="requirements-box">
+                    <h4>📋 ¿Qué necesitamos?</h4>
+                    <ul class="requirements-list">
+                        <li>Logo en alta resolución (SVG/PNG).</li>
+                        <li>Textos finales (Nosotros, Servicios, etc).</li>
+                        <li>Imágenes/Videos de alta calidad.</li>
+                        <li>Accesos a Hosting/Dominio (si ya tiene).</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+
+        <!-- SOCIAL MEDIA -->
+        <article class="card">
+            <div class="card-header"><h3>📱 Social Media</h3></div>
+            <div class="content-section">
+                <div class="info-tag">⏱ Plazo: Inicio en 5 días (Mensual)</div>
+                <div class="pricing-list">
+                    <div class="price-row"><span>Plan Pyme</span><span class="price-tag">$200 - $350</span></div>
+                    <div class="price-row"><span>Plan Premium</span><span class="price-tag">$450 - $1.000+</span></div>
+                </div>
+                <div class="requirements-box">
+                    <h4>📋 ¿Qué necesitamos?</h4>
+                    <ul class="requirements-list">
+                        <li>Acceso admin a Business Suite/Instagram.</li>
+                        <li>Manual de marca o colores corporativos.</li>
+                        <li>Acceso a fotos de productos/servicios.</li>
+                        <li>Método de pago para pauta (Ads).</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+
+        <!-- SEO / SEM -->
+        <article class="card">
+            <div class="card-header"><h3>🔍 SEO & Google Ads</h3></div>
+            <div class="content-section">
+                <div class="info-tag">⏱ Plazo: Resultados SEO 3-6 meses</div>
+                <div class="pricing-list">
+                    <div class="price-row"><span>Gestión de Pauta (Ads)</span><span class="price-tag">$50 - $150</span></div>
+                    <div class="price-row"><span>SEO Mensual</span><span class="price-tag">$400 - $750</span></div>
+                </div>
+                <div class="requirements-box">
+                    <h4>📋 ¿Qué necesitamos?</h4>
+                    <ul class="requirements-list">
+                        <li>Acceso a Google Search Console/Analytics.</li>
+                        <li>Credenciales de editor de la página web.</li>
+                        <li>Presupuesto de inversión diaria definido.</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+
+        <!-- BRANDING -->
+        <article class="card">
+            <div class="card-header"><h3>🎨 Branding</h3></div>
+            <div class="content-section">
+                <div class="info-tag">⏱ Plazo: 7 a 15 días hábiles</div>
+                <div class="pricing-list">
+                    <div class="price-row"><span>Diseño Logotipo</span><span class="price-tag">$150 - $350</span></div>
+                    <div class="price-row"><span>Identidad Completa</span><span class="price-tag">$500 - $1.200</span></div>
+                </div>
+                <div class="requirements-box">
+                    <h4>📋 ¿Qué necesitamos?</h4>
+                    <ul class="requirements-list">
+                        <li>Llenado del Brief Creativo (Cuestionario).</li>
+                        <li>Referencias de estilos que te gusten.</li>
+                        <li>Definición de valores de la empresa.</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+
+        <!-- AI MARKETING -->
+        <article class="card">
+            <div class="card-header"><h3>🤖 AI Marketing</h3></div>
+            <div class="content-section">
+                <div class="info-tag">⏱ Plazo: 5 a 10 días para el Setup</div>
+                <div class="pricing-list">
+                    <div class="price-row"><span>Chatbot IA (Simple)</span><span class="price-tag">$150</span></div>
+                    <div class="price-row"><span>IA Avanzada / CRM</span><span class="price-tag">$500+</span></div>
+                </div>
+                <div class="requirements-box">
+                    <h4>📋 ¿Qué necesitamos?</h4>
+                    <ul class="requirements-list">
+                        <li>Documento de FAQs (Preguntas frecuentes).</li>
+                        <li>Acceso a APIs o CRM (si aplica).</li>
+                        <li>Definición del tono de voz de la IA.</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+
+        <!-- PAQUETE GROWTH -->
+        <article class="card" style="border: 2px solid var(--secondary);">
+            <div class="card-header" style="background: #eff6ff;">
+                <h3>👑 Partner de Growth (360)</h3>
+            </div>
+            <div class="content-section">
+                <div class="info-tag">⏱ Plazo: Contrato mensual recurrente</div>
+                <p style="font-size: 0.9rem; margin-bottom: 10px;"><b>Desde $900 USD/mes</b></p>
+                <p style="font-size: 0.85rem; color: var(--text-muted);">Ideal para empresas que quieren delegar todo su departamento de marketing y tecnología a un equipo experto.</p>
+                <div class="requirements-box">
+                    <h4>📌 Lo que obtienes:</h4>
+                    <ul class="requirements-list">
+                        <li>Todo incluido (Web, SEO, Redes, Ads, IA).</li>
+                        <li>Reuniones quincenales de estrategia.</li>
+                        <li>Reportes de ROI y Conversiones.</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+    </div>
+
+    <footer class="contact-footer">
+        <h2>Información de Contacto</h2>
+        <div class="contact-grid" style="text-align: left; max-width: 800px; margin: 30px auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+            <div>
+                <h4 style="color: var(--accent);">📧 Correo Directo</h4>
+                <p style="font-size: 0.9rem;"><a href="mailto:infor@disenoweb.agencia">infor@disenoweb.agencia</a></p>
+            </div>
+            <div>
+                <h4 style="color: var(--accent);">✅ Pagos</h4>
+                <p style="font-size: 0.85rem;">Anticipo del 50% para iniciar y 50% contra entrega.</p>
+            </div>
+            <div>
+                <h4 style="color: var(--accent);">📍 Sedes</h4>
+                <p style="font-size: 0.85rem;">Quito, Guayaquil y Ambato.</p>
+            </div>
+        </div>
+        
+        <a href="https://wa.me/593988305139" target="_blank" class="whatsapp-cta">
+            📩 Escribir al WhatsApp: 098 830 5139
+        </a>
+    </footer>
+</div>
+
+</body>
+</html>
