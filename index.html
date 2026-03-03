@@ -166,6 +166,73 @@
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%230a0a0f'/><path d='M32 14 L14 50 L24 50 L28 40 L36 40 L40 50 L50 50 Z M29 32 L32 23 L35 32 Z' fill='%2300f0ff'/><path d='M32 14 L14 50 L24 50 L28 40 L36 40 L40 50 L50 50 Z M29 32 L32 23 L35 32 Z' fill='none' stroke='%238b5cf6' stroke-width='2'/></svg>">
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="style.css">
+    <style>
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .pricing-card {
+            text-align: center;
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .price-badge {
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 3rem;
+            font-weight: 800;
+            font-family: 'Outfit', sans-serif;
+            margin: 1.5rem 0;
+        }
+
+        .price-features {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 2rem;
+            text-align: left;
+            flex-grow: 1;
+        }
+
+        .price-features li {
+            margin-bottom: 1rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+        }
+
+        .price-features li::before {
+            content: '✓';
+            color: var(--accent-blue);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: -15px;
+            right: 20px;
+            background: var(--accent-gradient);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+    </style>
 </head>
 
 <body>
@@ -544,6 +611,76 @@
                         <p>Implementación de inteligencia artificial en el embudo de ventas, prediciendo tendencias y
                             escalando tu crecimiento.</p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="precios" class="section bg-darker">
+        <div class="container">
+            <h2 class="section-title text-center">Nuestros <span>Planes y Precios</span></h2>
+            <p class="section-subtitle text-center">
+                Inversiones claras orientadas al retorno y conversión en el mercado ecuatoriano.
+            </p>
+            <div class="pricing-grid">
+                <!-- Pricing Card 1 -->
+                <div class="pricing-card glass-card fade-in">
+                    <h3 style="font-size: 1.5rem; color: #fff;">Landing Page PRO</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Ideal para captar leads y ventas rápidas.
+                    </p>
+                    <div class="price-badge">Desde $299</div>
+                    <ul class="price-features">
+                        <li>Diseño UX/UI de Alta Conversión</li>
+                        <li>Responsive Design (Mobile First)</li>
+                        <li>Integración botón de WhatsApp</li>
+                        <li>Optimización SEO Básica</li>
+                        <li>Dominio (.com) y Hosting (1 año)</li>
+                        <li>Entrega en 5-7 días hábiles</li>
+                    </ul>
+                    <a href="https://wa.link/u4plqk" class="btn-primary"
+                        style="display: block; width: 100%; box-sizing: border-box;" target="_blank">Cotizar Ahora</a>
+                </div>
+
+                <!-- Pricing Card 2 (Redes Sociales) -->
+                <div class="pricing-card glass-card fade-in delay-1"
+                    style="position: relative; border-color: rgba(0, 240, 255, 0.4); box-shadow: 0 0 30px rgba(0,240,255,0.1);">
+                    <div class="popular-badge">MÁS ELEGIDO</div>
+                    <h3 style="font-size: 1.5rem; color: #fff;">Gestión de Redes Sociales</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Construye una comunidad fiel y aumenta tu
+                        alcance.
+                    </p>
+                    <div class="price-badge">Desde $399</div>
+                    <ul class="price-features">
+                        <li>Estrategia de Contenidos Mensual</li>
+                        <li>12 Posts / Carruseles Alta Calidad</li>
+                        <li>4 Reels / TikToks Verticales</li>
+                        <li>Community Management (Respuestas)</li>
+                        <li>Copywriting Persuasivo y Hashtags</li>
+                        <li>Reporte Crecimiento y Engagement</li>
+                    </ul>
+                    <a href="https://wa.link/u4plqk" class="btn-primary"
+                        style="display: block; width: 100%; box-sizing: border-box;" target="_blank">Cotizar
+                        Plan Social</a>
+                </div>
+
+                <!-- Pricing Card 3 -->
+                <div class="pricing-card glass-card fade-in delay-2">
+                    <h3 style="font-size: 1.5rem; color: #fff;">Marketing 360 & Ads</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Crecimiento escalable con pautaje digital.
+                    </p>
+                    <div class="price-badge">A Cotizar</div>
+                    <ul class="price-features">
+                        <li>Estrategia en Meta & Google Ads</li>
+                        <li>Gestión Completa de Redes Sociales</li>
+                        <li>Creación de Embudos de Venta</li>
+                        <li>Creación de Contenido Audiovisual</li>
+                        <li>Reportes Mensuales de Rendimiento</li>
+                        <li>Asesoría Estratégica Continua</li>
+                    </ul>
+                    <a href="https://wa.link/u4plqk" class="btn-secondary"
+                        style="display: block; width: 100%; box-sizing: border-box;" target="_blank">Agendar
+                        Asesoría</a>
                 </div>
             </div>
         </div>
