@@ -1,8 +1,8 @@
 // Preloader Fade Out
-window.addEventListener('load', () => {
+window.addEventListener('DOMContentLoaded', () => {
     const preloader = document.getElementById('preloader');
     if (preloader) {
-        // eliminamos el retraso artificial (setTimeout) para que cargue inmediato
+        // ocultar inmediatamente tan pronto el DOM esté listo
         preloader.classList.add('hidden');
     }
 });
