@@ -2,10 +2,8 @@
 window.addEventListener('load', () => {
     const preloader = document.getElementById('preloader');
     if (preloader) {
-        // slight delay to let user see the cool animation
-        setTimeout(() => {
-            preloader.classList.add('hidden');
-        }, 800);
+        // eliminamos el retraso artificial (setTimeout) para que cargue inmediato
+        preloader.classList.add('hidden');
     }
 });
 
@@ -148,6 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const cursorOutline = document.querySelector('.cursor-outline');
 
     if (cursorDot && cursorOutline) {
+        let cursorRaf;
         window.addEventListener('mousemove', (e) => {
             const posX = e.clientX;
             const posY = e.clientY;
@@ -155,11 +154,14 @@ document.addEventListener('DOMContentLoaded', () => {
             cursorDot.style.left = `${posX}px`;
             cursorDot.style.top = `${posY}px`;
 
-            // Smooth follow effect
-            cursorOutline.animate({
-                left: `${posX}px`,
-                top: `${posY}px`
-            }, { duration: 300, fill: "forwards" });
+            // Smooth follow effect (optimized with requestAnimationFrame)
+            if (cursorRaf) cancelAnimationFrame(cursorRaf);
+            cursorRaf = requestAnimationFrame(() => {
+                cursorOutline.animate({
+                    left: `${posX}px`,
+                    top: `${posY}px`
+                }, { duration: 300, fill: "forwards" });
+            });
         });
 
         const hoverElements = document.querySelectorAll('a, button, .service-card, .testimonial-card, .btn-whatsapp');

@@ -41,6 +41,7 @@
     </script>
 
     <!-- DNS Prefetch & Preconnect for Performance -->
+    <link rel="preload" href="assets/hero-bg.png" as="image">
     <link rel="dns-prefetch" href="https://images.unsplash.com">
     <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
     <link rel="dns-prefetch" href="https://randomuser.me">
@@ -416,26 +417,10 @@
                         Escríbenos por WhatsApp
                     </a>
                 </div>
-                <div class="cta-form glass-card fade-in delay-1">
-                    <form id="leadForm" name="contact" method="POST" data-netlify="true">
-                        <input type="hidden" name="form-name" value="contact">
-
-                        <div class="form-group">
-                            <label for="name">Nombre Completo</label>
-                            <input type="text" id="name" name="name" required placeholder="Ej. Carlos Mendoza">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Correo Corporativo</label>
-                            <input type="email" id="email" name="email" required placeholder="carlos@empresa.com">
-                        </div>
-                        <div class="form-group">
-                            <label for="goal">¿Cuál es tu mayor reto de marketing?</label>
-                            <textarea id="goal" name="goal" rows="3" required
-                                placeholder="Necesito duplicar mis ventas en 3 meses..."></textarea>
-                        </div>
-                        <button type="submit" class="btn-primary" style="width: 100%;">Solicitar Auditoría
-                            Gratuita</button>
-                    </form>
+                <div class="cta-image fade-in delay-1"
+                    style="display: flex; justify-content: center; align-items: center; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 40px rgba(0, 240, 255, 0.1); border: 1px solid var(--glass-border);">
+                    <img src="assets/cta-img.png" alt="Consultoría Estratégica Agency360ec"
+                        style="width: 100%; height: auto; object-fit: cover; aspect-ratio: 4/3;">
                 </div>
             </div>
         </div>
@@ -519,6 +504,9 @@
 
     <!-- Main Script -->
     <script src="main.js" defer></script>
+
+    <!-- Tidio Chat Widget -->
+    <script src="//code.tidio.co/bt3qtnwfn5piwnopuao8eyrt2fmm7rqr.js" async></script>
 </body>
 
 </html>
