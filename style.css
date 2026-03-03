@@ -527,6 +527,7 @@ ul {
     height: 21px;
     cursor: pointer;
     z-index: 1000;
+    position: relative;
 }
 
 .menu-toggle .bar {
@@ -546,7 +547,7 @@ ul {
     align-items: center;
     position: relative;
     padding-top: 80px;
-    background: linear-gradient(rgba(10, 10, 15, 0.7), rgba(10, 10, 15, 0.9)), url('assets/hero-bg.png');
+    background: linear-gradient(rgba(10, 10, 15, 0.7), rgba(10, 10, 15, 0.9)), url('assets/hero_bg_city.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -660,6 +661,35 @@ ul {
     animation: spin 15s linear infinite;
 }
 
+/* Neon Rotating Border Wrapper */
+.neon-border-wrap {
+    position: relative;
+    border-radius: 22px;
+    padding: 3px;
+    background: linear-gradient(var(--angle, 0deg), var(--accent-blue), var(--accent-purple), var(--accent-blue));
+    animation: neon-spin 4s linear infinite;
+    box-shadow: 0 0 18px rgba(0, 240, 255, 0.3), 0 0 40px rgba(139, 92, 246, 0.2);
+}
+
+.neon-border-wrap img {
+    display: block;
+    border-radius: 20px;
+    width: 100%;
+    height: auto;
+}
+
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes neon-spin {
+    to {
+        --angle: 360deg;
+    }
+}
+
 /* =========================================
    SERVICES SECTION
 ========================================= */
@@ -671,6 +701,9 @@ ul {
 
 .service-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .service-card:hover {
@@ -691,6 +724,7 @@ ul {
 .service-card p {
     color: var(--text-muted);
     font-size: 0.95rem;
+    flex-grow: 1;
 }
 
 /* =========================================
@@ -1274,22 +1308,26 @@ ul {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        position: fixed;
-        top: 0;
-        left: -100%;
-        /* Hidden by default */
-        width: 100%;
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translateX(-150vw);
+        width: 100vw;
         height: 100vh;
         background: rgba(10, 10, 15, 0.98);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
-        transition: left 0.4s ease;
+        transition: transform 0.4s ease;
         z-index: 999;
         border-radius: 0;
     }
 
+    [data-theme="light"] .nav-links {
+        background: rgba(255, 255, 255, 0.98);
+    }
+
     .nav-links.active {
-        left: 0;
+        transform: translateX(-50%);
     }
 
     .nav-links li {
@@ -1322,7 +1360,8 @@ ul {
     }
 
     .about-grid,
-    .testimonials-grid {
+    .testimonials-grid,
+    .cta-grid {
         grid-template-columns: 1fr;
     }
 
@@ -1336,5 +1375,17 @@ ul {
 
     .cta-box h2 {
         font-size: 2.2rem;
+    }
+
+    .btn-whatsapp {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .cta-image img {
+        width: 100%;
+        height: auto;
     }
 }
