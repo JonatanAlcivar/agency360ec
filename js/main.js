@@ -4,7 +4,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // 1. Scrolled Navbar Effect (fix: selector is .navbar-wrapper)
+  // 1. Scrolled Navbar Effect
   const navbar = document.querySelector('.navbar-wrapper');
   if (navbar) {
     window.addEventListener('scroll', () => {
@@ -12,29 +12,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 2. Mobile Drawer Menu
+  // 2. Classic Hamburger Dropdown Menu
   const mobileToggle = document.querySelector('.mobile-toggle');
-  const mobileDrawer = document.getElementById('mobile-drawer');
-  const drawerOverlay = document.getElementById('drawer-overlay');
-  const drawerClose = document.getElementById('drawer-close');
+  const mobileMenu   = document.getElementById('mobile-menu');
 
-  function openDrawer() {
-    mobileDrawer.classList.add('open');
-    drawerOverlay.classList.add('show');
-    document.body.style.overflow = 'hidden';
-    mobileToggle.setAttribute('aria-expanded', 'true');
+  if (mobileToggle && mobileMenu) {
+    mobileToggle.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      mobileToggle.setAttribute('aria-expanded', isOpen);
+      // swap icon bars <-> xmark
+      mobileToggle.querySelector('i').classList.toggle('fa-bars',  !isOpen);
+      mobileToggle.querySelector('i').classList.toggle('fa-xmark',  isOpen);
+    });
+
+    // close when clicking any link inside menu
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        mobileToggle.setAttribute('aria-expanded', 'false');
+        mobileToggle.querySelector('i').classList.replace('fa-xmark', 'fa-bars');
+      });
+    });
+
+    // close when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!navbar.contains(e.target) && mobileMenu.classList.contains('open')) {
+        mobileMenu.classList.remove('open');
+        mobileToggle.setAttribute('aria-expanded', 'false');
+        mobileToggle.querySelector('i').classList.replace('fa-xmark', 'fa-bars');
+      }
+    });
   }
-
-  function closeDrawer() {
-    mobileDrawer.classList.remove('open');
-    drawerOverlay.classList.remove('show');
-    document.body.style.overflow = '';
-    mobileToggle.setAttribute('aria-expanded', 'false');
-  }
-
-  if (mobileToggle) mobileToggle.addEventListener('click', openDrawer);
-  if (drawerClose) drawerClose.addEventListener('click', closeDrawer);
-  if (drawerOverlay) drawerOverlay.addEventListener('click', closeDrawer);
 
   // 3. FAQ Accordion Toggle
   const faqItems = document.querySelectorAll('.faq-item');
@@ -48,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 4. Smooth Scroll + close drawer on link click
+  // 4. Smooth Scroll for Navigation Anchors
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       const targetId = this.getAttribute('href');
@@ -56,10 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const targetElement = document.querySelector(targetId);
       if (targetElement) {
         e.preventDefault();
-        closeDrawer();
-        setTimeout(() => {
-          targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }, 300);
+        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     });
   });
