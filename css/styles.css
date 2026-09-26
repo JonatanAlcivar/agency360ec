@@ -362,11 +362,24 @@ h1, h2, h3, h4 {
 
 .mobile-toggle {
   display: none;
-  background: none;
-  border: none;
-  color: white;
-  font-size: 1.6rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border-card);
+  color: var(--text-main);
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  font-size: 1.3rem;
   cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  z-index: 1001;
+}
+
+.mobile-toggle:hover, .mobile-toggle:active {
+  background: rgba(16, 185, 129, 0.2);
+  border-color: var(--primary);
+  color: var(--primary);
 }
 
 /* Hero Section */
@@ -937,8 +950,20 @@ footer {
   .hero-content h1 { font-size: 3rem; }
   .hero-content { display: flex; flex-direction: column; align-items: center; }
   .calc-bento-grid { grid-template-columns: 1fr; }
-  .mobile-toggle { display: block; }
-  .nav-links { display: none; }
+  
+  /* Hide desktop navbar elements on mobile so mobile-toggle has space */
+  .nav-links, 
+  .market-switcher, 
+  .lang-switcher, 
+  .nav-container > div > .btn-whatsapp { 
+    display: none !important; 
+  }
+  
+  /* Show mobile toggle button cleanly */
+  .mobile-toggle { 
+    display: flex !important; 
+  }
+  
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
   .announcement-bar { font-size: 0.78rem; }
   .calc-summary-card { position: static; }
