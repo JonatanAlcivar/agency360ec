@@ -3,6 +3,7 @@
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
+
   // 1. Scrolled Navbar Effect
   const navbar = document.querySelector('.navbar');
   window.addEventListener('scroll', () => {
