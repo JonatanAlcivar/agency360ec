@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="es-US">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3S1BXQNPW1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3S1BXQNPW1');
+  </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
@@ -38,7 +47,7 @@
   <meta name="twitter:image" content="https://disenoweb.agency/images/hero.png">
 
   <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjEwMCIgZmlsbD0iIzBmMTcyYSIgLz48dGV4dCB4PSI1MCUiIHk9IjU1JSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iYm9sZCIgZm9udC1zaXplPSIyODAiIGZpbGw9IiMxMGI5ODEiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiPkRXPC90ZXh0Pjwvc3ZnPg==" type="image/svg+xml">
+      <link rel="icon" type="image/svg+xml" href="favicon.svg?v=2">
 
   <!-- Schema.org JSON-LD (Local Business SEO) -->
   <script type="application/ld+json">
@@ -69,9 +78,12 @@
       "@type": "OfferCatalog",
       "name": "Servicios de Diseño Web",
       "itemListElement": [
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Starter Landing Page"}, "price": "499", "priceCurrency": "USD"},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Business Growth Pro"}, "price": "899", "priceCurrency": "USD"},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "E-commerce & Ads Scale"}, "price": "1499", "priceCurrency": "USD"}
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Landing Básica"}, "price": "299", "priceCurrency": "USD"},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Landing Pro"}, "price": "499", "priceCurrency": "USD"},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Pack Campaña"}, "price": "799", "priceCurrency": "USD"},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Sitio Corporativo"}, "price": "999", "priceCurrency": "USD"},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Tienda Online"}, "price": "1499", "priceCurrency": "USD"},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Creación de Video UGC"}, "price": "150", "priceCurrency": "USD"}
       ]
     }
   }
@@ -84,7 +96,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/styles.css?v=4">
+  <link rel="stylesheet" href="css/styles.css?v=15">
 </head>
 <body>
 
@@ -92,6 +104,10 @@
   <div class="announcement-bar">
     <div class="marquee-content">
       <div style="display: flex; align-items: center; gap: 14px;">
+        <span class="announcement-badge">ESTADOS UNIDOS &amp; LATINOAMÉRICA</span>
+        <span>DiseñoWeb Studio | Páginas Web de Alta Conversión para Negocios Hispanos en <strong>Estados Unidos</strong> y <strong>Latinoamérica</strong></span>
+      </div>
+      <div aria-hidden="true" style="display: flex; align-items: center; gap: 14px;">
         <span class="announcement-badge">ESTADOS UNIDOS &amp; LATINOAMÉRICA</span>
         <span>DiseñoWeb Studio | Páginas Web de Alta Conversión para Negocios Hispanos en <strong>Estados Unidos</strong> y <strong>Latinoamérica</strong></span>
       </div>
@@ -111,6 +127,7 @@
         <li><a href="#portafolio" class="nav-link" data-i18n="nav_portfolio" data-es="Portafolio" data-en="Portfolio">Portafolio</a></li>
         <li><a href="#planes" class="nav-link" data-i18n="nav_plans" data-es="Planes" data-en="Plans">Planes</a></li>
         <li><a href="#cotizador" class="nav-link" data-i18n="nav_quote" data-es="Cotizador" data-en="Quote">Cotizador</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
       </ul>
 
       <!-- Mobile Dropdown Menu -->
@@ -121,10 +138,10 @@
         <a href="#testimonios"><i class="fa-solid fa-star"></i> Testimonios</a>
         <a href="#planes"><i class="fa-solid fa-tag"></i> Planes</a>
         <a href="#cotizador"><i class="fa-solid fa-calculator"></i> Cotizador</a>
+        <a href="blog.html"><i class="fa-solid fa-book-open"></i> Blog</a>
         <div class="mobile-menu-footer">
           <div class="drawer-lang">
             <a href="index.html" class="lang-btn active">ES</a>
-            <span>|</span>
             <a href="en.html" class="lang-btn">EN</a>
           </div>
           <a href="https://wa.me/593988305159?text=Hola%20Dise%C3%B1oWeb%20Studio,%20deseo%20cotizar%20un%20sitio%20web" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="width:100%;justify-content:center;">
@@ -134,15 +151,9 @@
       </div>
 
       <div style="display: flex; gap: 12px; align-items: center;">
-        <div class="market-switcher" role="group" aria-label="Seleccionar mercado">
-          <button class="market-btn active" data-market="usa">EE.UU. (USD)</button>
-          <button class="market-btn" data-market="latam">LATAM (USD)</button>
-        </div>
-
         <!-- Language Switcher -->
         <div class="lang-switcher" role="group" aria-label="Seleccionar idioma">
           <a href="index.html" class="lang-btn active" aria-label="Español" style="text-decoration:none;">ES</a>
-          <span aria-hidden="true" style="color: var(--border-card);">|</span>
           <a href="en.html" class="lang-btn" aria-label="English" style="text-decoration:none;">EN</a>
         </div>
 
@@ -187,30 +198,36 @@
         <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 20px;" data-i18n="quote_subtitle" data-es="Selecciona lo que tu negocio necesita y conoce tu valor estimado al instante:" data-en="Select what your business needs and get your instant estimate:">Selecciona lo que tu negocio necesita y conoce tu valor estimado al instante:</p>
 
         <div class="viral-quick-options">
-          <div class="quick-btn-option active" data-price="499" data-name="Starter Landing Page">
-            <span>Landing Express</span>
+          <div class="quick-btn-option active" data-price="299" data-name="Landing Básica">
+            <span>Landing Básica</span>
+            <small>$299 USD</small>
+          </div>
+
+          <div class="quick-btn-option" data-price="499" data-name="Landing Pro">
+            <span>Landing Pro</span>
             <small>$499 USD</small>
           </div>
 
-          <div class="quick-btn-option" data-price="899" data-name="Business Growth Pro">
-            <span>Web Corporativa</span>
-            <small>$899 USD</small>
+          <div class="quick-btn-option" data-price="799" data-name="Pack Campaña">
+            <span>Pack Campaña</span>
+            <small>$799 USD</small>
           </div>
 
-          <div class="quick-btn-option" data-price="1499" data-name="E-commerce Pro Scale">
-            <span>Tienda E-commerce</span>
+          <div class="quick-btn-option" data-price="999" data-name="Sitio Corporativo">
+            <span>Sitio Corporativo</span>
+            <small>$999 USD</small>
+          </div>
+
+          <div class="quick-btn-option" data-price="1499" data-name="Tienda Online">
+            <span>Tienda Online</span>
             <small>$1,499 USD</small>
           </div>
 
-          <div class="quick-btn-option" data-price="599" data-name="Ads + Chatbot IA 24/7">
-            <span>Ads + Chatbot IA</span>
-            <small>$599 USD</small>
-          </div>
         </div>
 
         <div class="viral-result-box">
           <span style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">Presupuesto Estimado</span>
-          <div class="viral-result-price" id="viral-hero-price">$499</div>
+          <div class="viral-result-price" id="viral-hero-price">$299</div>
         </div>
 
         <a href="https://wa.me/593988305159?text=Hola%20Dise%C3%B1oWeb%20Studio,%20deseo%20aprovechar%20los%20cupos%20disponibles%20para%20mi%20sitio%20web" id="viral-hero-whatsapp" target="_blank" rel="noopener" class="btn btn-whatsapp" style="width: 100%; font-size: 1.05rem;">
@@ -501,59 +518,93 @@
         <p data-i18n="price_p" data-es="Ahorras más del 60% comparado con agencias locales estadounidenses manteniendo calidad idéntica." data-en="Save over 60% compared to local US agencies with identical quality.">Ahorras más del 60% comparado con agencias locales estadounidenses manteniendo calidad idéntica.</p>
       </div>
 
-      <div class="pricing-grid" id="pricing-grid">
-        <!-- Plan 1: Starter Landing Page -->
+      <div class="pricing-carousel">
+      <div class="pricing-grid" id="pricing-grid" role="region" aria-roledescription="carrusel" aria-label="Paquetes de diseño web" tabindex="0">
+        <!-- Plan 1: Landing Básica -->
         <div class="pricing-card">
           <div>
-            <h3>Starter Landing Page</h3>
-            <p style="color: var(--text-muted); font-size: 0.9rem;">Ideal para lanzar tu negocio y recibir llamadas de inmediato.</p>
-            <div class="pricing-amount pricing-card-val" data-price-usa="499" data-price-latam="299">$499 <span>USD / íºnico</span></div>
+            <h3>Landing Básica</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">Una página profesional para presentar tu negocio y recibir consultas.</p>
+            <div class="pricing-amount pricing-card-val" data-price-usa="299" data-price-latam="299">$299 <span>USD / único</span></div>
           </div>
           <ul class="pricing-features">
-            <li><i class="fa-solid fa-check"></i> 1 Página de aterrizaje de alta conversión</li>
-            <li><i class="fa-solid fa-check"></i> Botón directo a WhatsApp y Formulario</li>
-            <li><i class="fa-solid fa-check"></i> Configuración de Google Business Profile</li>
-            <li><i class="fa-solid fa-check"></i> Optimizada 100% para Celulares</li>
-            <li><i class="fa-solid fa-check"></i> Entrega en 5 a 7 días hábiles</li>
-            <li><i class="fa-solid fa-check"></i> Dominio + Hosting SSD (1 aí±o gratis)</li>
+            <li><i class="fa-solid fa-check"></i> Diseño profesional de una página</li>
+            <li><i class="fa-solid fa-check"></i> Diseño adaptable a celulares</li>
+            <li><i class="fa-solid fa-check"></i> Botones de contacto y WhatsApp</li>
+            <li><i class="fa-solid fa-check"></i> Estructura enfocada en conversiones</li>
+            <li><i class="fa-solid fa-check"></i> Optimización básica para buscadores</li>
           </ul>
-          <a href="#cotizador" class="btn btn-secondary" style="width: 100%;">Seleccionar Starter</a>
+          <a href="#cotizador" class="btn btn-secondary" data-select-plan="Landing Básica" style="width: 100%;">Elegir plan</a>
         </div>
 
-        <!-- Plan 2: Business Growth Pro (Featured) -->
+        <!-- Plan 2: Landing Pro (Featured) -->
         <div class="pricing-card featured">
-          <div class="pricing-ribbon">MÁS POPULAR EN EE.UU.</div>
+          <div class="pricing-ribbon">MÁS RECOMENDADO</div>
           <div>
-            <h3 class="gradient-text">Business Growth Pro</h3>
-            <p style="color: var(--text-muted); font-size: 0.9rem;">La solución completa para liderar tu ciudad en Google.</p>
-            <div class="pricing-amount pricing-card-val" data-price-usa="899" data-price-latam="399" style="color: var(--primary);">$899 <span>USD / íºnico</span></div>
+            <h3 class="gradient-text">Landing Pro</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">Una landing page mejorada para atraer y convertir más clientes.</p>
+            <div class="pricing-amount pricing-card-val" data-price-usa="499" data-price-latam="499" style="color: var(--primary);">$499 <span>USD / único</span></div>
           </div>
           <ul class="pricing-features">
-            <li><i class="fa-solid fa-check"></i> Hasta 5 Secciones/páginas Profesionales</li>
-            <li><i class="fa-solid fa-check"></i> SEO Local Avanzado para Google Maps</li>
-            <li><i class="fa-solid fa-check"></i> Integración de Chatbot en WhatsApp 24/7</li>
-            <li><i class="fa-solid fa-check"></i> Panel Autoadministrable + Correos corporativos</li>
-            <li><i class="fa-solid fa-check"></i> Capacitación y 30 días de soporte garantizado</li>
+            <li><i class="fa-solid fa-check"></i> Todo lo incluido en Landing Básica</li>
+            <li><i class="fa-solid fa-check"></i> Contenido y secciones ampliadas</li>
+            <li><i class="fa-solid fa-check"></i> Integración de herramientas de seguimiento</li>
+            <li><i class="fa-solid fa-check"></i> Optimización para campañas digitales</li>
+            <li><i class="fa-solid fa-check"></i> Soporte después de la entrega</li>
           </ul>
-          <a href="#cotizador" class="btn btn-primary" style="width: 100%;">Seleccionar Growth Pro</a>
+          <a href="#cotizador" class="btn btn-primary" data-select-plan="Landing Pro" style="width: 100%;">Elegir plan</a>
         </div>
 
-        <!-- Plan 3: E-commerce & Ads Scale -->
+        <!-- Plan 3: Pack Campaña -->
         <div class="pricing-card">
           <div>
-            <h3>E-commerce & Ads Scale</h3>
-            <p style="color: var(--text-muted); font-size: 0.9rem;">Para vender productos en lí­nea en todo el paí­s.</p>
-            <div class="pricing-amount pricing-card-val" data-price-usa="1499" data-price-latam="599">$1,499 <span>USD / íºnico</span></div>
+            <h3>Pack Campaña</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">Landing page y configuración inicial para lanzar tu campaña.</p>
+            <div class="pricing-amount pricing-card-val" data-price-usa="799" data-price-latam="799">$799 <span>USD / único</span></div>
           </div>
           <ul class="pricing-features">
-            <li><i class="fa-solid fa-check"></i> Tienda Virtual con Catálogo Ilimitado</li>
-            <li><i class="fa-solid fa-check"></i> Pasarelas de Pago (Stripe, PayPal, Tarjetas)</li>
-            <li><i class="fa-solid fa-check"></i> Configuración de Campaí±a de Anuncios Ads</li>
-            <li><i class="fa-solid fa-check"></i> Gestión de Pedidos e Inventario</li>
-            <li><i class="fa-solid fa-check"></i> Capacitación completa para tu equipo</li>
+            <li><i class="fa-solid fa-check"></i> Todo lo incluido en Landing Pro</li>
+            <li><i class="fa-solid fa-check"></i> Configuración inicial de campaña digital</li>
+            <li><i class="fa-solid fa-check"></i> Integración de analítica y seguimiento</li>
+            <li><i class="fa-solid fa-check"></i> Preparación de llamadas a la acción</li>
+            <li><i class="fa-solid fa-check"></i> Acompañamiento para el lanzamiento</li>
           </ul>
-          <a href="#cotizador" class="btn btn-secondary" style="width: 100%;">Seleccionar Scale</a>
+          <a href="#cotizador" class="btn btn-secondary" data-select-plan="Pack Campaña" style="width: 100%;">Elegir plan</a>
         </div>
+        <div class="pricing-card">
+          <div>
+            <h3>Sitio Corporativo</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">Una presencia web completa para presentar tus servicios y fortalecer tu marca.</p>
+            <div class="pricing-amount pricing-card-val" data-price-usa="999" data-price-latam="999">$999 <span>USD / único</span></div>
+          </div>
+          <ul class="pricing-features">
+            <li><i class="fa-solid fa-check"></i> Sitio web de varias secciones</li>
+            <li><i class="fa-solid fa-check"></i> Diseño adaptable a celulares</li>
+            <li><i class="fa-solid fa-check"></i> Formularios y botones de contacto</li>
+            <li><i class="fa-solid fa-check"></i> Optimización básica para buscadores</li>
+          </ul>
+          <a href="#cotizador" class="btn btn-secondary" data-select-plan="Sitio Corporativo" style="width: 100%;">Elegir plan</a>
+        </div>
+        <div class="pricing-card">
+          <div>
+            <h3>Tienda Online</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">Una tienda digital para mostrar tus productos y recibir pedidos.</p>
+            <div class="pricing-amount pricing-card-val" data-price-usa="1499" data-price-latam="1499">$1,499 <span>USD / único</span></div>
+          </div>
+          <ul class="pricing-features">
+            <li><i class="fa-solid fa-check"></i> Catálogo de productos</li>
+            <li><i class="fa-solid fa-check"></i> Carrito y flujo de pedidos</li>
+            <li><i class="fa-solid fa-check"></i> Diseño adaptable a celulares</li>
+            <li><i class="fa-solid fa-check"></i> Integración de contacto y WhatsApp</li>
+          </ul>
+          <a href="#cotizador" class="btn btn-secondary" data-select-plan="Tienda Online" style="width: 100%;">Elegir plan</a>
+        </div>
+      </div>
+      <div class="pricing-carousel-controls">
+        <button type="button" class="pricing-carousel-button" data-pricing-scroll="-1" aria-label="Ver planes anteriores"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i></button>
+        <span class="pricing-carousel-position" aria-live="polite">1 / 5</span>
+        <button type="button" class="pricing-carousel-button" data-pricing-scroll="1" aria-label="Ver siguientes planes"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+      </div>
       </div>
     </div>
   </section>
@@ -565,40 +616,53 @@
         <span class="badge">Presupuesto en Tiempo Real</span>
         <h2>Cotizador Interactivo de Proyectos</h2>
         <p>Personaliza las necesidades de tu proyecto y recibe el desglose exacto al instante.</p>
+        <div class="market-switcher" role="group" aria-label="Seleccionar mercado" style="justify-content: center; width: fit-content; margin: 18px auto 12px;">
+          <button type="button" class="market-btn active" data-market="usa" aria-pressed="true">EE. UU.</button>
+          <button type="button" class="market-btn" data-market="latam" aria-pressed="false">Latinoamérica</button>
+        </div>
+        <p style="font-size: 0.95rem; margin: 0 auto;">¿Estás en Latinoamérica? Escríbenos y cuéntanos qué necesitas; podemos personalizar el precio según el alcance de tu proyecto.</p>
       </div>
 
       <div class="calc-bento-grid">
         <div class="calc-options-card">
           <h4 style="color: var(--primary); margin-bottom: 20px;"><i class="fa-solid fa-layer-group"></i> 1. Paquete Principal</h4>
           
-          <div class="calc-option plan-option selected" data-price-usa="499" data-price-latam="299" data-price="499" data-name="Starter Landing Page">
+          <div class="calc-option plan-option selected" data-price-usa="299" data-price-latam="299" data-price="299" data-name="Landing Básica">
             <div>
-              <span style="font-weight: 700; display: block;">Starter Landing Page</span>
-              <span style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; display: block; margin-top: 4px;">Incluye: Diseño web de 1 página, botón WhatsApp, formulario y optimización móvil.</span>
+              <span style="font-weight: 700; display: block;">Landing Básica</span>
+              <span style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; display: block; margin-top: 4px;">Incluye: diseño profesional de una página, contacto directo y adaptación móvil.</span>
+            </div>
+            <span class="option-price">$299 USD</span>
+          </div>
+
+          <div class="calc-option plan-option" data-price-usa="499" data-price-latam="499" data-price="499" data-name="Landing Pro">
+            <div>
+              <span style="font-weight: 700; display: block;">Landing Pro</span>
+              <span style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; display: block; margin-top: 4px;">Incluye: página ampliada, contenido optimizado e integraciones de seguimiento.</span>
             </div>
             <span class="option-price">$499 USD</span>
           </div>
 
-          <div class="calc-option plan-option" data-price-usa="899" data-price-latam="399" data-price="899" data-name="Business Growth Pro">
+          <div class="calc-option plan-option" data-price-usa="799" data-price-latam="799" data-price="799" data-name="Pack Campaña">
             <div>
-              <span style="font-weight: 700; display: block;">Business Growth Pro</span>
-              <span style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; display: block; margin-top: 4px;">Incluye: Sitio de hasta 5 páginas, blog autoadministrable, SEO básico, dominio.</span>
+              <span style="font-weight: 700; display: block;">Pack Campaña</span>
+              <span style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; display: block; margin-top: 4px;">Incluye: landing page y configuración inicial para lanzar tu campaña digital.</span>
             </div>
-            <span class="option-price">$899 USD</span>
+            <span class="option-price">$799 USD</span>
           </div>
 
-          <div class="calc-option plan-option" data-price-usa="599" data-price-latam="399" data-price="599" data-name="Gestión de Redes & Ads">
+          <div class="calc-option plan-option" data-price-usa="999" data-price-latam="999" data-price="999" data-name="Sitio Corporativo">
             <div>
-              <span style="font-weight: 700; display: block;">Gestión de Redes & Ads</span>
-              <span style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; display: block; margin-top: 4px;">Incluye: Creación de contenido mensual, manejo de pauta publicitaria en Meta/Google.</span>
+              <span style="font-weight: 700; display: block;">Sitio Corporativo</span>
+              <span style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; display: block; margin-top: 4px;">Incluye: sitio de varias secciones, formularios de contacto y diseño adaptable.</span>
             </div>
-            <span class="option-price">$599 USD</span>
+            <span class="option-price">$999 USD</span>
           </div>
 
-          <div class="calc-option plan-option" data-price-usa="1499" data-price-latam="599" data-price="1499" data-name="E-commerce & Ads Scale">
+          <div class="calc-option plan-option" data-price-usa="1499" data-price-latam="1499" data-price="1499" data-name="Tienda Online">
             <div>
-              <span style="font-weight: 700; display: block;">E-commerce & Ads Scale</span>
-              <span style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; display: block; margin-top: 4px;">Incluye: Tienda virtual, pasarela de pago, catálogos de productos y automatizaciones.</span>
+              <span style="font-weight: 700; display: block;">Tienda Online</span>
+              <span style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; display: block; margin-top: 4px;">Incluye: catálogo de productos, carrito y flujo para recibir pedidos.</span>
             </div>
             <span class="option-price">$1,499 USD</span>
           </div>
@@ -607,10 +671,10 @@
 
           <div class="calc-option">
             <div style="display: flex; align-items: flex-start; gap: 12px;">
-              <input type="checkbox" class="addon-checkbox" data-price-usa="99" data-price-latam="50" data-price="99" data-name="Branding & Logo Profesional" style="margin-top: 4px;">
+              <input type="checkbox" class="addon-checkbox" data-price-usa="99" data-price-latam="69" data-price="99" data-name="Branding & Logo Profesional" style="margin-top: 4px;">
               <div>
                 <span style="font-weight: 600; display: block;">Branding & Logo Profesional</span>
-                <span style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; display: block; margin-top: 2px;">Incluye: Diseño de logotipo, paleta de colores y manual de marca.</span>
+                <span style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; display: block; margin-top: 2px;">Incluye: una propuesta de logotipo, dos revisiones y archivos digitales finales.</span>
               </div>
             </div>
             <span class="option-price">+$99 USD</span>
@@ -618,10 +682,10 @@
 
           <div class="calc-option">
             <div style="display: flex; align-items: flex-start; gap: 12px;">
-              <input type="checkbox" class="addon-checkbox" data-price-usa="120" data-price-latam="60" data-price="120" data-name="Campaí±a Ads (Google/Meta)" style="margin-top: 4px;">
+              <input type="checkbox" class="addon-checkbox" data-price-usa="120" data-price-latam="69" data-price="120" data-name="Campaña Ads (Google/Meta)" style="margin-top: 4px;">
               <div>
-                <span style="font-weight: 600; display: block;">Campaí±a de Anuncios Ads</span>
-                <span style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; display: block; margin-top: 2px;">Incluye: Configuración de campaí±a, segmentación y redacción de anuncios.</span>
+                <span style="font-weight: 600; display: block;">Campaña de anuncios</span>
+                <span style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; display: block; margin-top: 2px;">Incluye: configuración de una campaña en Google o Meta. No incluye presupuesto publicitario ni administración mensual.</span>
               </div>
             </div>
             <span class="option-price">+$120 USD</span>
@@ -629,30 +693,97 @@
 
           <div class="calc-option">
             <div style="display: flex; align-items: flex-start; gap: 12px;">
-              <input type="checkbox" class="addon-checkbox" data-price-usa="80" data-price-latam="40" data-price="80" data-name="Chatbot IA en WhatsApp" style="margin-top: 4px;">
+              <input type="checkbox" class="addon-checkbox" data-price-usa="79" data-price-latam="59" data-price="79" data-name="Configuración de Perfil de Negocio de Google" style="margin-top: 4px;">
               <div>
-                <span style="font-weight: 600; display: block;">Chatbot IA en WhatsApp 24/7</span>
-                <span style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; display: block; margin-top: 2px;">Incluye: Respuestas automáticas con IA y embudo de agendamiento.</span>
+                <span style="font-weight: 600; display: block;">Configuración de Perfil de Negocio de Google</span>
+                <span style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; display: block; margin-top: 2px;">Configuración o revisión inicial de tu perfil. Crear el perfil de Google es gratis.</span>
               </div>
             </div>
-            <span class="option-price">+$80 USD</span>
+            <span class="option-price">+$79 USD</span>
+          </div>
+
+          <div class="calc-option">
+            <div style="display: flex; align-items: flex-start; gap: 12px;">
+              <input type="checkbox" class="addon-checkbox" data-price-usa="149" data-price-latam="99" data-price="149" data-name="SEO Local Inicial" style="margin-top: 4px;">
+              <div>
+                <span style="font-weight: 600; display: block;">SEO Local Inicial</span>
+                <span style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; display: block; margin-top: 2px;">Revisión local y optimización inicial de una página; no se garantizan posiciones.</span>
+              </div>
+            </div>
+            <span class="option-price">+$149 USD</span>
+          </div>
+
+          <div class="calc-option">
+            <div style="display: flex; align-items: flex-start; gap: 12px;">
+              <input type="checkbox" class="addon-checkbox" data-price-usa="80" data-price-latam="99" data-price="80" data-name="Automatización Básica de WhatsApp" style="margin-top: 4px;">
+              <div>
+                <span style="font-weight: 600; display: block;">Automatización Básica de WhatsApp</span>
+                <span style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; display: block; margin-top: 2px;">Incluye: flujo inicial de respuestas automáticas. Licencias y cargos de plataforma se cobran aparte.</span>
+              </div>
+            </div>
+            <span class="option-price">+$149 USD</span>
+          </div>
+
+          <div class="calc-option">
+            <div style="display: flex; align-items: flex-start; gap: 12px;">
+              <input type="checkbox" class="addon-checkbox" data-price-usa="150" data-price-latam="99" data-price="150" data-name="Video UGC (1 video)" style="margin-top: 4px;">
+              <div>
+                <span style="font-weight: 600; display: block;">Creación de Video UGC</span>
+                <span style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; display: block; margin-top: 2px;">Un video para promocionar tu negocio. Derechos de uso extendido y material sin editar se cotizan aparte.</span>
+              </div>
+            </div>
+            <span class="option-price">+$150 USD</span>
+          </div>
+
+          <div class="calc-option">
+            <div style="display: flex; align-items: flex-start; gap: 12px;">
+              <input type="checkbox" class="addon-checkbox" data-price-usa="99" data-price-latam="69" data-price="99" data-name="Formulario de Contacto y Correo Automático" style="margin-top: 4px;">
+              <div>
+                <span style="font-weight: 600; display: block;">Formulario de Contacto y Correo Automático</span>
+                <span style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; display: block; margin-top: 2px;">Incluye: formulario y un correo de confirmación. La suscripción de la plataforma no está incluida.</span>
+              </div>
+            </div>
+            <span class="option-price">+$99 USD</span>
+          </div>
+
+          <div class="calc-option">
+            <div style="display: flex; align-items: flex-start; gap: 12px;">
+              <input type="checkbox" class="addon-checkbox" data-price-usa="39" data-price-latam="29" data-price="39" data-billing-cycle="monthly" data-name="Mantenimiento Web Esencial" style="margin-top: 4px;">
+              <div>
+                <span style="font-weight: 600; display: block;">Mantenimiento Web Esencial</span>
+                <span style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; display: block; margin-top: 2px;">Mensual: revisión y cambios pequeños limitados. Dominio, hosting y cambios grandes se cobran aparte.</span>
+              </div>
+            </div>
+            <span class="option-price">+$39 USD / mes</span>
+          </div>
+
+          <div class="calc-option">
+            <div style="display: flex; align-items: flex-start; gap: 12px;">
+              <input type="checkbox" class="addon-checkbox" data-price-usa="99" data-price-latam="69" data-price="99" data-name="Revisión de Velocidad Web" style="margin-top: 4px;">
+              <div>
+                <span style="font-weight: 600; display: block;">Revisión de Velocidad Web</span>
+                <span style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; display: block; margin-top: 2px;">Diagnóstico y ajustes iniciales de alcance limitado; los resultados dependen del sitio y su alojamiento.</span>
+              </div>
+            </div>
+            <span class="option-price">+$99 USD</span>
           </div>
         </div>
 
         <div class="calc-summary-card">
           <div>
             <h3 style="font-size: 1.4rem; margin-bottom: 16px;"><i class="fa-solid fa-receipt gradient-text"></i> Resumen de Cotización</h3>
-            <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 6px;">Paquete Seleccionado:</div>
-            <div id="calc-plan-summary" style="font-weight: 800; color: var(--text-main); margin-bottom: 16px;">Starter Landing Page ($499)</div>
+            <div style="font-size: 0.85rem; color: #cfddd3; margin-bottom: 6px;">Paquete Seleccionado:</div>
+            <div id="calc-plan-summary" style="font-weight: 800; color: #fff; margin-bottom: 16px;">Landing Básica ($299)</div>
             
-            <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 6px;">Adicionales:</div>
-            <div id="calc-addons-summary" style="font-size: 0.85rem; color: var(--primary);">Sin adicionales seleccionados</div>
+            <div style="font-size: 0.85rem; color: #cfddd3; margin-bottom: 6px;">Adicionales:</div>
+            <div id="calc-addons-summary" style="font-size: 0.85rem; color: #b3ddc1;">Sin adicionales seleccionados</div>
           </div>
 
           <div>
             <div class="calc-total-box">
-              <span style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">Inversión Total Estimada</span>
-              <div class="calc-total-price" id="calc-total-display">$499</div>
+              <span style="font-size: 0.8rem; color: #cfddd3; text-transform: uppercase;">Inversión Inicial Estimada</span>
+              <div class="calc-total-price" id="calc-total-display">$299</div>
+              <div id="calc-recurring-display" style="display: none; margin-top: 8px; color: #cfddd3; font-size: 0.85rem;"></div>
             </div>
 
             <a href="#" id="calc-send-whatsapp" target="_blank" rel="noopener" class="btn btn-whatsapp" style="width: 100%;">
@@ -675,20 +806,21 @@
           <p style="margin-bottom: 20px;" data-i18n="footer_p" data-es="Agencia de Diseño Web y Marketing Digital de Alta conversión para Negocios Hispanos en Estados Unidos y Latinoamérica." data-en="High-Conversion Web Design &amp; Digital Marketing Agency for Hispanic Businesses in the United States and Latin America.">
             Agencia de Diseño Web y Marketing Digital de Alta conversión para Negocios Hispanos en Estados Unidos y Latinoamérica.
           </p>
-          <div style="display: flex; gap: 16px; font-size: 1.2rem;">
-            <a href="https://wa.me/593988305159" target="_blank" style="color: var(--primary);"><i class="fa-brands fa-whatsapp"></i></a>
-            <a href="#" style="color: var(--text-muted);"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" style="color: var(--text-muted);"><i class="fa-brands fa-facebook"></i></a>
+          <div class="footer-social" style="display: flex; gap: 16px; font-size: 1.2rem;">
+            <a href="https://wa.me/593988305159" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
           </div>
+          <a class="footer-blog-link" href="blog.html">Guías para hacer crecer tu negocio</a>
         </div>
 
         <div>
           <h4 data-i18n="footer_cities" data-es="Ciudades EE.UU." data-en="US Cities">Ciudades EE.UU.</h4>
           <ul class="footer-links">
-            <li><a href="#inicio">Miami, Florida</a></li>
-            <li><a href="#inicio">Houston, Texas</a></li>
-            <li><a href="#inicio">New York City, NY</a></li>
-            <li><a href="#inicio">Los Ángeles, CA</a></li>
+            <li><a href="diseno-web-miami.html">Miami, Florida</a></li>
+            <li><a href="diseno-web-houston.html">Houston, Texas</a></li>
+            <li><a href="diseno-web-nueva-york.html">New York City, NY</a></li>
+            <li><a href="diseno-web-los-angeles.html">Los Ángeles, CA</a></li>
           </ul>
         </div>
 
@@ -705,10 +837,7 @@
           <h4 data-i18n="footer_contact" data-es="Contacto Directo" data-en="Direct Contact">Contacto Directo</h4>
           <ul class="contact-list" style="list-style: none; padding: 0; margin-bottom: 20px;">
             <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 10px;">
-              <i class="fa-solid fa-envelope" style="color: var(--primary);"></i> info@disenoweb.agency
-            </li>
-            <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 10px;">
-              <i class="fa-solid fa-globe" style="color: var(--primary);"></i> disenoweb.agency
+              <i class="fa-solid fa-envelope"></i> info@disenoweb.agency
             </li>
           </ul>
           <button onclick="window.open('https://wa.me/593988305159', '_blank')" class="btn btn-whatsapp" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 10px; padding: 12px; cursor: pointer; font-family: inherit; font-size: 1rem;">
@@ -717,8 +846,8 @@
         </div>
       </div>
 
-      <div class="footer-bottom" data-i18n="footer_copy" data-es="© 2026 DiseñoWeb Studio (disenoweb.agency). Todos los derechos reservados." data-en="© 2026 DiseñoWeb Studio (disenoweb.agency). All rights reserved.">
-        &copy; 2026 DiseñoWeb Studio (disenoweb.agency). Todos los derechos reservados.
+      <div class="footer-bottom" data-i18n="footer_copy" data-es="© 2026 DiseñoWeb Studio. Todos los derechos reservados." data-en="© 2026 DiseñoWeb Studio. All rights reserved.">
+        &copy; 2026 DiseñoWeb Studio. Todos los derechos reservados.
       </div>
     </div>
   </footer>
@@ -729,9 +858,7 @@
   </a>
 
   <!-- Scripts -->
-  <script src="js/main.js?v=3"></script>
-  <script src="js/calculator.js?v=3"></script>
+  <script src="js/main.js?v=4"></script>
+  <script src="js/calculator.js?v=6"></script>
 </body>
 </html>
-
-

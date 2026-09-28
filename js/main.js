@@ -56,7 +56,52 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 4. Smooth Scroll for Navigation Anchors
+  // 4. Pricing Plan Carousel
+  const pricingGrid = document.getElementById('pricing-grid');
+  const pricingCarousel = pricingGrid?.closest('.pricing-carousel');
+
+  if (pricingGrid && pricingCarousel) {
+    const cards = [...pricingGrid.querySelectorAll('.pricing-card')];
+    const previousButton = pricingCarousel.querySelector('[data-pricing-scroll="-1"]');
+    const nextButton = pricingCarousel.querySelector('[data-pricing-scroll="1"]');
+    const position = pricingCarousel.querySelector('.pricing-carousel-position');
+
+    const updateCarouselPosition = () => {
+      const currentIndex = cards.reduce((closestIndex, card, index) => {
+        const currentDistance = Math.abs(card.getBoundingClientRect().left - pricingGrid.getBoundingClientRect().left);
+        const closestDistance = Math.abs(cards[closestIndex].getBoundingClientRect().left - pricingGrid.getBoundingClientRect().left);
+        return currentDistance < closestDistance ? index : closestIndex;
+      }, 0);
+
+      if (position) position.textContent = `${currentIndex + 1} / ${cards.length}`;
+      if (previousButton instanceof HTMLButtonElement) previousButton.disabled = currentIndex === 0;
+      if (nextButton instanceof HTMLButtonElement) nextButton.disabled = currentIndex === cards.length - 1;
+    };
+
+    pricingCarousel.querySelectorAll('[data-pricing-scroll]').forEach(button => {
+      button.addEventListener('click', () => {
+        const direction = Number(button.getAttribute('data-pricing-scroll'));
+        const currentIndex = cards.reduce((closestIndex, card, index) => {
+          const currentDistance = Math.abs(card.getBoundingClientRect().left - pricingGrid.getBoundingClientRect().left);
+          const closestDistance = Math.abs(cards[closestIndex].getBoundingClientRect().left - pricingGrid.getBoundingClientRect().left);
+          return currentDistance < closestDistance ? index : closestIndex;
+        }, 0);
+        const targetCard = cards[Math.min(Math.max(currentIndex + direction, 0), cards.length - 1)];
+        const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        pricingGrid.scrollTo({
+          left: pricingGrid.scrollLeft + targetCard.getBoundingClientRect().left - pricingGrid.getBoundingClientRect().left,
+          behavior: reducedMotion ? 'auto' : 'smooth'
+        });
+      });
+    });
+
+    pricingGrid.addEventListener('scroll', updateCarouselPosition, { passive: true });
+    window.addEventListener('resize', updateCarouselPosition);
+    updateCarouselPosition();
+  }
+
+  // 5. Smooth Scroll for Navigation Anchors
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       const targetId = this.getAttribute('href');

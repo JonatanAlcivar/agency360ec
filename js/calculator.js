@@ -8,10 +8,29 @@ document.addEventListener('DOMContentLoaded', () => {
   const heroDisplayPrice = document.getElementById('viral-hero-price');
   const heroWhatsappBtn = document.getElementById('viral-hero-whatsapp');
 
-  let selectedViralName = "Starter Landing Page";
-  let selectedViralPrice = 499;
+  let selectedViralName = "Landing Básica";
+  let selectedViralPrice = 299;
 
   if (quickOptions.length > 0) {
+    const activeOption = document.querySelector('.quick-btn-option.active');
+    if (activeOption) {
+      selectedViralName = activeOption.dataset.name;
+      selectedViralPrice = parseInt(activeOption.dataset.price, 10);
+    }
+
+    const updateHeroQuote = () => {
+      if (heroDisplayPrice) {
+        const locale = document.documentElement.lang.startsWith('en') ? 'en-US' : 'es-US';
+        heroDisplayPrice.textContent = `$${selectedViralPrice.toLocaleString(locale)}`;
+      }
+
+      if (heroWhatsappBtn) {
+        const whatsappNumber = "593988305159";
+        const message = `SOLICITUD VIRAL RAPIDA - DISEÑOWEB STUDIO\n\nServicio Seleccionado: ${selectedViralName}\nPresupuesto Estimado: $${selectedViralPrice} USD\n\nHola DiseñoWeb Studio, deseo aprovechar los cupos disponibles para mi sitio web.`;
+        heroWhatsappBtn.href = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+      }
+    };
+
     quickOptions.forEach(opt => {
       opt.addEventListener('click', () => {
         quickOptions.forEach(o => o.classList.remove('active'));
@@ -19,23 +38,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         selectedViralName = opt.dataset.name;
         selectedViralPrice = parseInt(opt.dataset.price, 10);
-
-        if (heroDisplayPrice) {
-          heroDisplayPrice.textContent = `$${selectedViralPrice}`;
-        }
-
-        if (heroWhatsappBtn) {
-          const whatsappNumber = "593988305159";
-          let message = `SOLICITUD VIRAL RAPIDA - DISEÑOWEB STUDIO\n\n`;
-          message += `Servicio Seleccionado: ${selectedViralName}\n`;
-          message += `Presupuesto Estimado: $${selectedViralPrice} USD\n\n`;
-          message += `Hola DiseñoWeb Studio, deseo aprovechar los cupos disponibles para mi sitio web.`;
-
-          const encodedMsg = encodeURIComponent(message);
-          heroWhatsappBtn.href = `https://wa.me/${whatsappNumber}?text=${encodedMsg}`;
-        }
+        updateHeroQuote();
       });
     });
+
+    updateHeroQuote();
   }
 
   // 2. Main Bento Interactive Calculator Logic
@@ -45,15 +52,22 @@ document.addEventListener('DOMContentLoaded', () => {
   const planSummaryEl = document.getElementById('calc-plan-summary');
   const addonsSummaryEl = document.getElementById('calc-addons-summary');
   const sendWhatsappBtn = document.getElementById('calc-send-whatsapp');
+  const recurringTotalEl = document.getElementById('calc-recurring-display');
   const marketBtns = document.querySelectorAll('.market-btn');
+  const isEnglish = document.documentElement.lang.startsWith('en');
 
-  let currentMarket = 'usa'; // Default: EE.UU. Market ($499 / $899 / $1499)
+  let currentMarket = 'usa';
+
+  function formatPrice(price) {
+    return Number(price).toLocaleString(isEnglish ? 'en-US' : 'es-US');
+  }
 
   // Market Switcher Handler
   marketBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       marketBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
+      marketBtns.forEach(b => b.setAttribute('aria-pressed', String(b === btn)));
       currentMarket = btn.dataset.market;
       
       updatePricesForMarket();
@@ -70,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
       opt.dataset.price = price;
       const priceLabel = opt.querySelector('.option-price');
       if (priceLabel) {
-        priceLabel.textContent = `$${price} USD`;
+        priceLabel.textContent = `$${formatPrice(price)} USD`;
       }
     });
 
@@ -83,7 +97,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const parentOption = cb.closest('.calc-option');
       const priceLabel = parentOption ? parentOption.querySelector('.option-price') : null;
       if (priceLabel) {
-        priceLabel.textContent = `+$${price} USD`;
+        const billingLabel = cb.dataset.billingCycle === 'monthly'
+          ? (isEnglish ? ' / month' : ' / mes')
+          : '';
+        priceLabel.textContent = `+$${formatPrice(price)} USD${billingLabel}`;
       }
     });
 
@@ -92,7 +109,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const pUsa = cardPrice.dataset.priceUsa;
       const pLatam = cardPrice.dataset.priceLatam;
       const val = currentMarket === 'usa' ? pUsa : pLatam;
-      cardPrice.innerHTML = `$${val} <span style="font-size: 1rem; color: var(--text-muted); font-weight: 500;">USD / único</span>`;
+      const paymentLabel = document.documentElement.lang.startsWith('en') ? 'One-time' : 'único';
+      cardPrice.innerHTML = `$${formatPrice(val)} <span style="font-size: 1rem; color: var(--text-muted); font-weight: 500;">USD / ${paymentLabel}</span>`;
     });
   }
 
@@ -106,6 +124,13 @@ document.addEventListener('DOMContentLoaded', () => {
       if (radio) radio.checked = true;
 
       updateCalculator();
+    });
+  });
+
+  document.querySelectorAll('[data-select-plan]').forEach(button => {
+    button.addEventListener('click', () => {
+      const option = [...planOptions].find(plan => plan.dataset.name === button.dataset.selectPlan);
+      if (option) option.click();
     });
   });
 
@@ -129,19 +154,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function updateCalculator() {
     const selectedPlan = document.querySelector('.plan-option.selected');
-    const basePrice = selectedPlan ? parseInt(selectedPlan.dataset.price, 10) : 499;
-    const selectedPlanName = selectedPlan ? selectedPlan.dataset.name : 'Starter Landing Page';
+    const basePrice = selectedPlan ? parseInt(selectedPlan.dataset.price, 10) : 299;
+    const selectedPlanName = selectedPlan ? selectedPlan.dataset.name : 'Landing Básica';
 
     let addonsTotal = 0;
+    let recurringTotal = 0;
     const selectedAddons = [];
 
     addonCheckboxes.forEach(cb => {
       if (cb.checked) {
         const price = parseInt(cb.dataset.price, 10);
-        addonsTotal += price;
+        const isRecurring = cb.dataset.billingCycle === 'monthly';
+        if (isRecurring) {
+          recurringTotal += price;
+        } else {
+          addonsTotal += price;
+        }
         selectedAddons.push({
           name: cb.dataset.name,
-          price: price
+          price: price,
+          isRecurring: isRecurring
         });
       }
     });
@@ -150,37 +182,82 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Update UI
     if (totalPriceEl) {
-      totalPriceEl.textContent = `$${grandTotal}`;
+      totalPriceEl.textContent = `$${formatPrice(grandTotal)}`;
     }
 
     if (planSummaryEl) {
-      planSummaryEl.textContent = `${selectedPlanName} ($${basePrice})`;
+      planSummaryEl.textContent = `${selectedPlanName} ($${formatPrice(basePrice)})`;
     }
 
     if (addonsSummaryEl) {
       if (selectedAddons.length === 0) {
-        addonsSummaryEl.textContent = 'Sin servicios adicionales';
+        addonsSummaryEl.textContent = isEnglish ? 'No add-ons selected' : 'Sin adicionales seleccionados';
       } else {
-        addonsSummaryEl.textContent = selectedAddons.map(a => `${a.name} (+$${a.price})`).join(', ');
+        addonsSummaryEl.textContent = selectedAddons.map(a => {
+          const billingLabel = a.isRecurring ? (isEnglish ? ' / month' : ' / mes') : '';
+          return `${a.name} (+$${formatPrice(a.price)}${billingLabel})`;
+        }).join(', ');
+      }
+    }
+
+    if (recurringTotalEl) {
+      if (recurringTotal > 0) {
+        recurringTotalEl.textContent = isEnglish
+          ? `Recurring services: $${formatPrice(recurringTotal)} USD / month`
+          : `Servicios recurrentes: $${formatPrice(recurringTotal)} USD / mes`;
+        recurringTotalEl.style.display = 'block';
+      } else {
+        recurringTotalEl.textContent = '';
+        recurringTotalEl.style.display = 'none';
       }
     }
 
     // Update WhatsApp link
     if (sendWhatsappBtn) {
       const whatsappNumber = "593988305159";
-      const marketLabel = currentMarket === 'usa' ? 'ESTADOS UNIDOS' : 'ECUADOR / LATAM';
-      let message = `COTIZACION PROYECTO WEB - DISEÑOWEB STUDIO\n`;
-      message += `Mercado: ${marketLabel}\n\n`;
-      message += `Paquete Seleccionado: ${selectedPlanName}\n`;
+      const marketLabel = currentMarket === 'usa'
+        ? (isEnglish ? 'UNITED STATES' : 'ESTADOS UNIDOS')
+        : (isEnglish ? 'ECUADOR / LATAM' : 'ECUADOR / LATAM');
+      const messageLabels = isEnglish
+        ? {
+            title: 'WEB PROJECT QUOTE - DISEÑOWEB STUDIO',
+            market: 'Market',
+            plan: 'Selected Package',
+            addons: 'Additional Services',
+            recurring: 'Recurring services',
+            none: 'None',
+            estimate: 'Estimated Budget',
+            greeting: 'Hello DiseñoWeb Studio, I would like to get started on my website project.'
+          }
+        : {
+            title: 'COTIZACION PROYECTO WEB - DISEÑOWEB STUDIO',
+            market: 'Mercado',
+            plan: 'Paquete Seleccionado',
+            addons: 'Servicios Adicionales',
+            recurring: 'Servicios recurrentes',
+            none: 'Ninguno',
+            estimate: 'Presupuesto Estimado',
+            greeting: 'Hola DiseñoWeb Studio, deseo iniciar mi proyecto web.'
+          };
+      let message = `${messageLabels.title}\n`;
+      message += `${messageLabels.market}: ${marketLabel}\n\n`;
+      message += `${messageLabels.plan}: ${selectedPlanName}\n`;
       
       if (selectedAddons.length > 0) {
-        message += `Servicios Adicionales: \n` + selectedAddons.map(a => `  - ${a.name} (+$${a.price})`).join('\n') + `\n`;
+        message += `${messageLabels.addons}: \n` + selectedAddons.map(a => {
+          const billingLabel = a.isRecurring ? (isEnglish ? ' / month' : ' / mes') : '';
+          return `  - ${a.name} (+$${formatPrice(a.price)}${billingLabel})`;
+        }).join('\n') + `\n`;
       } else {
-        message += `Servicios Adicionales: Ninguno\n`;
+        message += `${messageLabels.addons}: ${messageLabels.none}\n`;
       }
 
-      message += `\nPresupuesto Estimado: $${grandTotal} USD\n\n`;
-      message += `Hola DiseñoWeb Studio, deseo iniciar mi proyecto web.`;
+      message += `\n${messageLabels.estimate}: $${formatPrice(grandTotal)} USD\n`;
+      if (recurringTotal > 0) {
+        message += `${messageLabels.recurring}: $${formatPrice(recurringTotal)} USD / ${isEnglish ? 'month' : 'mes'}\n`;
+      }
+      message += '\n';
+      message += messageLabels.greeting;
 
       const encodedMsg = encodeURIComponent(message);
       sendWhatsappBtn.href = `https://wa.me/${whatsappNumber}?text=${encodedMsg}`;

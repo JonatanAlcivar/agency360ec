@@ -168,50 +168,49 @@ const translations = {
     pricing_grid_html: `
       <div class="pricing-card">
         <div>
-          <h3>Starter Landing Page</h3>
-          <p style="color: var(--text-muted); font-size: 0.9rem;">Ideal para lanzar tu negocio y recibir llamadas de inmediato.</p>
-          <div class="pricing-amount pricing-card-val" data-price-usa="499" data-price-latam="299">$499 <span>USD / Único</span></div>
+          <h3>Landing Básica</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">Una página profesional para presentar tu negocio y recibir consultas.</p>
+          <div class="pricing-amount pricing-card-val" data-price-usa="299" data-price-latam="299">$299 <span>USD / Único</span></div>
         </div>
         <ul class="pricing-features">
-          <li><i class="fa-solid fa-check"></i> 1 Página de aterrizaje de alta conversión</li>
-          <li><i class="fa-solid fa-check"></i> Botón directo a WhatsApp y Formulario</li>
-          <li><i class="fa-solid fa-check"></i> Configuración de Google Business Profile</li>
-          <li><i class="fa-solid fa-check"></i> Optimizada 100% para Celulares</li>
-          <li><i class="fa-solid fa-check"></i> Entrega en 5 a 7 días hábiles</li>
-          <li><i class="fa-solid fa-check"></i> Dominio + Hosting SSD (1 año gratis)</li>
+          <li><i class="fa-solid fa-check"></i> Diseño profesional de una página</li>
+          <li><i class="fa-solid fa-check"></i> Diseño adaptable a celulares</li>
+          <li><i class="fa-solid fa-check"></i> Botones de contacto y WhatsApp</li>
+          <li><i class="fa-solid fa-check"></i> Estructura enfocada en conversiones</li>
+          <li><i class="fa-solid fa-check"></i> Optimización básica para buscadores</li>
         </ul>
-        <a href="#cotizador" class="btn btn-secondary" style="width: 100%;">Seleccionar Starter</a>
+        <a href="#cotizador" class="btn btn-secondary" style="width: 100%;">Elegir plan</a>
       </div>
       <div class="pricing-card featured">
-        <div class="pricing-ribbon">MÁS POPULAR EN EE.UU.</div>
+        <div class="pricing-ribbon">MÁS RECOMENDADO</div>
         <div>
-          <h3 class="gradient-text">Business Growth Pro</h3>
-          <p style="color: var(--text-muted); font-size: 0.9rem;">La solución completa para liderar tu ciudad en Google.</p>
-          <div class="pricing-amount pricing-card-val" data-price-usa="899" data-price-latam="399" style="color: var(--primary);">$899 <span>USD / Único</span></div>
+          <h3 class="gradient-text">Landing Pro</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">Una landing page mejorada para atraer y convertir más clientes.</p>
+          <div class="pricing-amount pricing-card-val" data-price-usa="499" data-price-latam="499" style="color: var(--primary);">$499 <span>USD / Único</span></div>
         </div>
         <ul class="pricing-features">
-          <li><i class="fa-solid fa-check"></i> Hasta 5 Secciones/páginas Profesionales</li>
-          <li><i class="fa-solid fa-check"></i> SEO Local Avanzado para Google Maps</li>
-          <li><i class="fa-solid fa-check"></i> Integración de Chatbot en WhatsApp 24/7</li>
-          <li><i class="fa-solid fa-check"></i> Panel Autoadministrable + Correos corporativos</li>
-          <li><i class="fa-solid fa-check"></i> Capacitación y 30 días de soporte garantizado</li>
+          <li><i class="fa-solid fa-check"></i> Todo lo incluido en Landing Básica</li>
+          <li><i class="fa-solid fa-check"></i> Contenido y secciones ampliadas</li>
+          <li><i class="fa-solid fa-check"></i> Integración de herramientas de seguimiento</li>
+          <li><i class="fa-solid fa-check"></i> Optimización para campañas digitales</li>
+          <li><i class="fa-solid fa-check"></i> Soporte después de la entrega</li>
         </ul>
-        <a href="#cotizador" class="btn btn-primary" style="width: 100%;">Seleccionar Growth Pro</a>
+        <a href="#cotizador" class="btn btn-primary" style="width: 100%;">Elegir plan</a>
       </div>
       <div class="pricing-card">
         <div>
-          <h3>E-commerce &amp; Ads Scale</h3>
-          <p style="color: var(--text-muted); font-size: 0.9rem;">Para vender productos en línea en todo el país.</p>
-          <div class="pricing-amount pricing-card-val" data-price-usa="1499" data-price-latam="599">$1,499 <span>USD / Único</span></div>
+          <h3>Pack Campaña</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">Landing page y configuración inicial para lanzar tu campaña.</p>
+          <div class="pricing-amount pricing-card-val" data-price-usa="799" data-price-latam="799">$799 <span>USD / Único</span></div>
         </div>
         <ul class="pricing-features">
-          <li><i class="fa-solid fa-check"></i> Tienda Virtual con Catálogo Ilimitado</li>
-          <li><i class="fa-solid fa-check"></i> Pasarelas de Pago (Stripe, PayPal, Tarjetas)</li>
-          <li><i class="fa-solid fa-check"></i> Configuración de Campaña de Anuncios Ads</li>
-          <li><i class="fa-solid fa-check"></i> Gestión de Pedidos e Inventario</li>
-          <li><i class="fa-solid fa-check"></i> Capacitación completa para tu equipo</li>
+          <li><i class="fa-solid fa-check"></i> Todo lo incluido en Landing Pro</li>
+          <li><i class="fa-solid fa-check"></i> Configuración inicial de campaña digital</li>
+          <li><i class="fa-solid fa-check"></i> Integración de analítica y seguimiento</li>
+          <li><i class="fa-solid fa-check"></i> Preparación de llamadas a la acción</li>
+          <li><i class="fa-solid fa-check"></i> Acompañamiento para el lanzamiento</li>
         </ul>
-        <a href="#cotizador" class="btn btn-secondary" style="width: 100%;">Seleccionar Scale</a>
+        <a href="#cotizador" class="btn btn-secondary" style="width: 100%;">Elegir plan</a>
       </div>`
   },
 
@@ -379,50 +378,49 @@ const translations = {
     pricing_grid_html: `
       <div class="pricing-card">
         <div>
-          <h3>Starter Landing Page</h3>
-          <p style="color: var(--text-muted); font-size: 0.9rem;">Ideal for launching your business and getting calls immediately.</p>
-          <div class="pricing-amount pricing-card-val" data-price-usa="499" data-price-latam="299">$499 <span>USD / One-time</span></div>
+          <h3>Basic Landing Page</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">A professional page to present your business and get inquiries.</p>
+          <div class="pricing-amount pricing-card-val" data-price-usa="299" data-price-latam="299">$299 <span>USD / One-time</span></div>
         </div>
         <ul class="pricing-features">
-          <li><i class="fa-solid fa-check"></i> 1 High-conversion landing page</li>
-          <li><i class="fa-solid fa-check"></i> Direct WhatsApp button &amp; Contact form</li>
-          <li><i class="fa-solid fa-check"></i> Google Business Profile setup</li>
-          <li><i class="fa-solid fa-check"></i> 100% Mobile-optimized</li>
-          <li><i class="fa-solid fa-check"></i> Delivery in 5 to 7 business days</li>
-          <li><i class="fa-solid fa-check"></i> Domain + SSD Hosting (1 year free)</li>
+          <li><i class="fa-solid fa-check"></i> Professional single-page design</li>
+          <li><i class="fa-solid fa-check"></i> Mobile-responsive layout</li>
+          <li><i class="fa-solid fa-check"></i> Contact and WhatsApp buttons</li>
+          <li><i class="fa-solid fa-check"></i> Conversion-focused structure</li>
+          <li><i class="fa-solid fa-check"></i> Basic search optimization</li>
         </ul>
-        <a href="#cotizador" class="btn btn-secondary" style="width: 100%;">Choose Starter</a>
+        <a href="#cotizador" class="btn btn-secondary" style="width: 100%;">Choose plan</a>
       </div>
       <div class="pricing-card featured">
-        <div class="pricing-ribbon">MOST POPULAR IN THE USA</div>
+        <div class="pricing-ribbon">RECOMMENDED</div>
         <div>
-          <h3 class="gradient-text">Business Growth Pro</h3>
-          <p style="color: var(--text-muted); font-size: 0.9rem;">The complete solution to lead your city on Google.</p>
-          <div class="pricing-amount pricing-card-val" data-price-usa="899" data-price-latam="399" style="color: var(--primary);">$899 <span>USD / One-time</span></div>
+          <h3 class="gradient-text">Landing Pro</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">An enhanced landing page to attract and convert more customers.</p>
+          <div class="pricing-amount pricing-card-val" data-price-usa="499" data-price-latam="499" style="color: var(--primary);">$499 <span>USD / One-time</span></div>
         </div>
         <ul class="pricing-features">
-          <li><i class="fa-solid fa-check"></i> Up to 5 Professional Sections/pages</li>
-          <li><i class="fa-solid fa-check"></i> Advanced Local SEO for Google Maps</li>
-          <li><i class="fa-solid fa-check"></i> WhatsApp Chatbot Integration 24/7</li>
-          <li><i class="fa-solid fa-check"></i> Self-managed panel + Corporate emails</li>
-          <li><i class="fa-solid fa-check"></i> Training &amp; 30 days guaranteed support</li>
+          <li><i class="fa-solid fa-check"></i> Everything in Basic Landing Page</li>
+          <li><i class="fa-solid fa-check"></i> Expanded content and sections</li>
+          <li><i class="fa-solid fa-check"></i> Tracking tool integration</li>
+          <li><i class="fa-solid fa-check"></i> Optimized for digital campaigns</li>
+          <li><i class="fa-solid fa-check"></i> Post-launch support</li>
         </ul>
-        <a href="#cotizador" class="btn btn-primary" style="width: 100%;">Choose Growth Pro</a>
+        <a href="#cotizador" class="btn btn-primary" style="width: 100%;">Choose plan</a>
       </div>
       <div class="pricing-card">
         <div>
-          <h3>E-commerce &amp; Ads Scale</h3>
-          <p style="color: var(--text-muted); font-size: 0.9rem;">For selling products online nationwide.</p>
-          <div class="pricing-amount pricing-card-val" data-price-usa="1499" data-price-latam="599">$1,499 <span>USD / One-time</span></div>
+          <h3>Campaign Pack</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">A landing page and initial setup to launch your campaign.</p>
+          <div class="pricing-amount pricing-card-val" data-price-usa="799" data-price-latam="799">$799 <span>USD / One-time</span></div>
         </div>
         <ul class="pricing-features">
-          <li><i class="fa-solid fa-check"></i> Online Store with Unlimited Catalog</li>
-          <li><i class="fa-solid fa-check"></i> Payment Gateways (Stripe, PayPal, Cards)</li>
-          <li><i class="fa-solid fa-check"></i> Ads Campaign Setup (Google/Meta)</li>
-          <li><i class="fa-solid fa-check"></i> Order &amp; Inventory Management</li>
-          <li><i class="fa-solid fa-check"></i> Complete training for your team</li>
+          <li><i class="fa-solid fa-check"></i> Everything in Landing Pro</li>
+          <li><i class="fa-solid fa-check"></i> Initial digital campaign setup</li>
+          <li><i class="fa-solid fa-check"></i> Analytics and tracking integration</li>
+          <li><i class="fa-solid fa-check"></i> Conversion-focused calls to action</li>
+          <li><i class="fa-solid fa-check"></i> Launch support</li>
         </ul>
-        <a href="#cotizador" class="btn btn-secondary" style="width: 100%;">Choose Scale</a>
+        <a href="#cotizador" class="btn btn-secondary" style="width: 100%;">Choose plan</a>
       </div>`
   }
 };
