@@ -1,9 +1,0 @@
-@media (max-width: 768px) {
-  .local-page .navbar-wrapper .lang-switcher {
-    display: flex !important;
-  }
-
-  .local-page .navbar-wrapper .btn-whatsapp {
-    display: none;
-  }
-}
