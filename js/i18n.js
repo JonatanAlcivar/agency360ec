@@ -14,8 +14,8 @@ const translations = {
     hero_h1: 'Obtén un Sitio Web que <span class="gradient-text">Genera Llamadas en 5 Días</span>',
     hero_subtitle: 'Desarrollamos páginas web profesionales de alta conversión para pequeños negocios en <strong>Miami, Houston, Nueva York y Latinoamérica</strong>. Sin contratos largos. 100% de garantía de entrega.',
     hero_feat1: 'Entrega en 5–7 días', hero_feat2: 'Sin contratos complejos', hero_feat3: 'Soporte en Español',
-    quote_title: 'Cotizador Rápido en 3 Segundos',
-    quote_subtitle: 'Selecciona lo que tu negocio necesita y conoce tu valor estimado al instante:',
+    quote_title: 'Diagnóstico Web Gratis en 30 Segundos',
+    quote_subtitle: 'Responde 5 preguntas y descubre qué tan visible es tu negocio en internet:',
 
     // Sections headers
     ind_badge: 'Soluciones por Sector Comercial',
@@ -224,8 +224,8 @@ const translations = {
     hero_h1: 'Get a Website that <span class="gradient-text">Generates Calls in 5 Days</span>',
     hero_subtitle: 'We build high-conversion professional websites for small businesses in <strong>Miami, Houston, New York and Latin America</strong>. No long contracts. 100% delivery guarantee.',
     hero_feat1: 'Delivered in 5–7 days', hero_feat2: 'No complex contracts', hero_feat3: 'Spanish &amp; English Support',
-    quote_title: '3-Second Quick Quote',
-    quote_subtitle: 'Select what your business needs and get your instant estimate:',
+    quote_title: 'Free Website Diagnosis in 30 Seconds',
+    quote_subtitle: 'Answer 5 quick questions and find out how visible your business is online:',
 
     // Section headers
     ind_badge: 'Solutions by Business Sector',

@@ -96,7 +96,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/styles.css?v=18">
+  <link rel="stylesheet" href="css/styles.css?v=22">
 </head>
 <body>
 
@@ -190,56 +190,41 @@
         </div>
       </div>
 
-      <!-- Cotizador Widget (Sleek, Modern & Lightweight) -->
+      <!-- Diagnóstico Web Widget (Quiz de captación) -->
       <div class="viral-hero-card">
         <div class="viral-step-header">
           <div class="viral-icon-circle">
-            <i class="fa-solid fa-bolt" style="color: var(--accent-gold);"></i>
+            <i class="fa-solid fa-clipboard-check" style="color: var(--accent-gold);"></i>
           </div>
           <div>
-            <h3 data-i18n="quote_title" data-es="Cotizador Rápido en 3 Segundos" data-en="3-Second Quick Quote">Cotizador Rápido en 3 Segundos</h3>
-            <p data-i18n="quote_subtitle" data-es="Selecciona lo que tu negocio necesita y conoce tu valor estimado al instante:" data-en="Select what your business needs and get your instant estimate:">Selecciona lo que tu negocio necesita y conoce tu valor estimado al instante:</p>
+            <h3>Diagnóstico Web Gratis en 30 Segundos</h3>
+            <p>Responde 5 preguntas y descubre qué tan visible es tu negocio en internet:</p>
           </div>
         </div>
 
-        <div class="viral-quick-options">
-          <div class="quick-btn-option active" data-price="299" data-name="Landing Básica">
-            <span class="opt-name">Landing Básica</span>
-            <span class="opt-price">$299 USD</span>
+        <div id="quiz-box">
+          <div class="quiz-topline">
+            <span class="quiz-step" id="quiz-step">Pregunta 1 de 5</span>
+            <button type="button" class="quiz-back" id="quiz-back" hidden>&larr; Atrás</button>
           </div>
-
-          <div class="quick-btn-option" data-price="499" data-name="Landing Pro">
-            <span class="opt-name">Landing Pro</span>
-            <span class="opt-price">$499 USD</span>
-          </div>
-
-          <div class="quick-btn-option" data-price="799" data-name="Pack Campaña">
-            <span class="opt-name">Pack Campaña</span>
-            <span class="opt-price">$799 USD</span>
-          </div>
-
-          <div class="quick-btn-option" data-price="999" data-name="Sitio Corporativo">
-            <span class="opt-name">Sitio Corporativo</span>
-            <span class="opt-price">$999 USD</span>
-          </div>
-
-          <div class="quick-btn-option opt-wide" data-price="1499" data-name="Tienda Online">
-            <span class="opt-name"><i class="fa-solid fa-cart-shopping" style="margin-right: 6px; font-size: 0.85em; opacity: 0.75;"></i> Tienda Online E-commerce</span>
-            <span class="opt-price">$1,499 USD</span>
-          </div>
+          <div class="quiz-progress"><div class="quiz-progress-fill" id="quiz-progress-fill"></div></div>
+          <div class="quiz-question" id="quiz-question"></div>
+          <div class="quiz-answers" id="quiz-answers"></div>
         </div>
 
-        <div class="viral-result-box">
-          <div class="viral-result-left">
-            <span class="viral-result-label">Inversión Estimada</span>
-            <span class="viral-result-note">Pago único • Entrega garantizada</span>
+        <div id="quiz-result-box" hidden>
+          <div class="viral-result-box">
+            <div class="viral-result-left">
+              <span class="viral-result-label">Tu puntaje de presencia digital</span>
+              <span class="viral-result-note" id="quiz-verdict"></span>
+            </div>
+            <div class="viral-result-price"><span id="quiz-score">0</span><span class="quiz-score-total">/100</span></div>
           </div>
-          <div class="viral-result-price" id="viral-hero-price">$299</div>
+          <a href="#" id="quiz-whatsapp" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp viral-cta-btn">
+            <i class="fa-brands fa-whatsapp"></i> Recibir mi diagnóstico completo
+          </a>
+          <button type="button" class="quiz-restart" id="quiz-restart">&#8635; Repetir diagnóstico</button>
         </div>
-
-        <a href="https://wa.me/593988305159?text=Hola%20Dise%C3%B1oWeb%20Studio,%20deseo%20aprovechar%20los%20cupos%20disponibles%20para%20mi%20sitio%20web" id="viral-hero-whatsapp" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp viral-cta-btn">
-          <i class="fa-brands fa-whatsapp"></i> Reservar Cupo por WhatsApp
-        </a>
       </div>
     </div>
   </section>
@@ -530,9 +515,10 @@
         <!-- Plan 1: Landing Básica -->
         <div class="pricing-card">
           <div>
+            <div class="pricing-icon-circle"><i class="fa-solid fa-rocket"></i></div>
             <h3>Landing Básica</h3>
             <p style="color: var(--text-muted); font-size: 0.9rem;">Una página profesional para presentar tu negocio y recibir consultas.</p>
-            <div class="pricing-amount pricing-card-val" data-price-usa="299" data-price-latam="299">$299 <span>USD / único</span></div>
+            <div class="pricing-amount pricing-card-val" data-price-usa="299" data-price-latam="299">$299 <span>USD · pago único</span></div>
           </div>
           <ul class="pricing-features">
             <li><i class="fa-solid fa-check"></i> Diseño profesional de una página</li>
@@ -548,9 +534,10 @@
         <div class="pricing-card featured">
           <div class="pricing-ribbon">MÁS RECOMENDADO</div>
           <div>
+            <div class="pricing-icon-circle"><i class="fa-solid fa-bullseye"></i></div>
             <h3 class="gradient-text">Landing Pro</h3>
             <p style="color: var(--text-muted); font-size: 0.9rem;">Una landing page mejorada para atraer y convertir más clientes.</p>
-            <div class="pricing-amount pricing-card-val" data-price-usa="499" data-price-latam="499" style="color: var(--primary);">$499 <span>USD / único</span></div>
+            <div class="pricing-amount pricing-card-val" data-price-usa="499" data-price-latam="499" style="color: var(--primary);">$499 <span>USD · pago único</span></div>
           </div>
           <ul class="pricing-features">
             <li><i class="fa-solid fa-check"></i> Todo lo incluido en Landing Básica</li>
@@ -565,9 +552,10 @@
         <!-- Plan 3: Pack Campaña -->
         <div class="pricing-card">
           <div>
+            <div class="pricing-icon-circle"><i class="fa-solid fa-bullhorn"></i></div>
             <h3>Pack Campaña</h3>
             <p style="color: var(--text-muted); font-size: 0.9rem;">Landing page y configuración inicial para lanzar tu campaña.</p>
-            <div class="pricing-amount pricing-card-val" data-price-usa="799" data-price-latam="799">$799 <span>USD / único</span></div>
+            <div class="pricing-amount pricing-card-val" data-price-usa="799" data-price-latam="799">$799 <span>USD · pago único</span></div>
           </div>
           <ul class="pricing-features">
             <li><i class="fa-solid fa-check"></i> Todo lo incluido en Landing Pro</li>
@@ -580,29 +568,33 @@
         </div>
         <div class="pricing-card">
           <div>
+            <div class="pricing-icon-circle"><i class="fa-solid fa-building"></i></div>
             <h3>Sitio Corporativo</h3>
             <p style="color: var(--text-muted); font-size: 0.9rem;">Una presencia web completa para presentar tus servicios y fortalecer tu marca.</p>
-            <div class="pricing-amount pricing-card-val" data-price-usa="999" data-price-latam="999">$999 <span>USD / único</span></div>
+            <div class="pricing-amount pricing-card-val" data-price-usa="999" data-price-latam="999">$999 <span>USD · pago único</span></div>
           </div>
           <ul class="pricing-features">
             <li><i class="fa-solid fa-check"></i> Sitio web de varias secciones</li>
             <li><i class="fa-solid fa-check"></i> Diseño adaptable a celulares</li>
             <li><i class="fa-solid fa-check"></i> Formularios y botones de contacto</li>
             <li><i class="fa-solid fa-check"></i> Optimización básica para buscadores</li>
+            <li><i class="fa-solid fa-check"></i> Soporte prioritario por 30 días</li>
           </ul>
           <a href="#cotizador" class="btn btn-secondary" data-select-plan="Sitio Corporativo" style="width: 100%;">Elegir plan</a>
         </div>
         <div class="pricing-card">
           <div>
+            <div class="pricing-icon-circle"><i class="fa-solid fa-store"></i></div>
             <h3>Tienda Online</h3>
             <p style="color: var(--text-muted); font-size: 0.9rem;">Una tienda digital para mostrar tus productos y recibir pedidos.</p>
-            <div class="pricing-amount pricing-card-val" data-price-usa="1499" data-price-latam="1499">$1,499 <span>USD / único</span></div>
+            <div class="pricing-amount pricing-card-val" data-price-usa="1499" data-price-latam="1499">$1,499 <span>USD · pago único</span></div>
           </div>
           <ul class="pricing-features">
             <li><i class="fa-solid fa-check"></i> Catálogo de productos</li>
             <li><i class="fa-solid fa-check"></i> Carrito y flujo de pedidos</li>
             <li><i class="fa-solid fa-check"></i> Diseño adaptable a celulares</li>
             <li><i class="fa-solid fa-check"></i> Integración de contacto y WhatsApp</li>
+            <li><i class="fa-solid fa-check"></i> Capacitación para gestionar tu tienda</li>
           </ul>
           <a href="#cotizador" class="btn btn-secondary" data-select-plan="Tienda Online" style="width: 100%;">Elegir plan</a>
         </div>
@@ -611,6 +603,11 @@
         <button type="button" class="pricing-carousel-button" data-pricing-scroll="-1" aria-label="Ver planes anteriores"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i></button>
         <span class="pricing-carousel-position" aria-live="polite">1 / 5</span>
         <button type="button" class="pricing-carousel-button" data-pricing-scroll="1" aria-label="Ver siguientes planes"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+      </div>
+      <div class="pricing-trust-row">
+        <span class="pricing-trust-item"><i class="fa-solid fa-shield-halved"></i> Garantía de entrega 100%</span>
+        <span class="pricing-trust-item"><i class="fa-solid fa-file-signature"></i> Sin contratos complejos</span>
+        <span class="pricing-trust-item"><i class="fa-solid fa-headset"></i> Soporte en Español</span>
       </div>
       </div>
     </div>
@@ -622,25 +619,31 @@
       <div class="section-header text-center">
         <span class="badge">Presupuesto en Tiempo Real</span>
         <h2>Cotizador Interactivo de Proyectos</h2>
-        <p>Personaliza las necesidades de tu proyecto y recibe el desglose exacto al instante.</p>
+        <p>Elige un paquete, suma los servicios que necesites y recibe el precio exacto al instante.</p>
       </div>
 
       <div class="calc-bento-grid">
         <div class="calc-options-card">
-          <h4 style="color: var(--primary); margin-bottom: 20px;"><i class="fa-solid fa-layer-group"></i> 1. Paquete Principal</h4>
-          
+          <h4 class="calc-step-title"><i class="fa-solid fa-layer-group"></i> 1. Paquete Principal</h4>
+
           <div class="calc-option plan-option selected" data-price-usa="299" data-price-latam="299" data-price="299" data-name="Landing Básica">
-            <div>
-              <span style="font-weight: 700; display: block;">Landing Básica</span>
-              <span style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; display: block; margin-top: 4px;">Incluye: diseño profesional de una página, contacto directo y adaptación móvil.</span>
+            <div class="calc-option-info">
+              <span class="calc-option-icon"><i class="fa-solid fa-rocket"></i></span>
+              <div>
+                <span class="calc-option-name">Landing Básica</span>
+                <span class="calc-option-desc">Incluye: diseño profesional de una página, contacto directo y adaptación móvil.</span>
+              </div>
             </div>
             <span class="option-price">$299 USD</span>
           </div>
 
           <div class="calc-option plan-option" data-price-usa="499" data-price-latam="499" data-price="499" data-name="Landing Pro">
-            <div>
-              <span style="font-weight: 700; display: block;">Landing Pro</span>
-              <span style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; display: block; margin-top: 4px;">Incluye: página ampliada, contenido optimizado e integraciones de seguimiento.</span>
+            <div class="calc-option-info">
+              <span class="calc-option-icon"><i class="fa-solid fa-bullseye"></i></span>
+              <div>
+                <span class="calc-option-name">Landing Pro</span>
+                <span class="calc-option-desc">Incluye: página ampliada, contenido optimizado e integraciones de seguimiento.</span>
+              </div>
             </div>
             <span class="option-price">$499 USD</span>
           </div>
@@ -875,6 +878,6 @@
 
   <!-- Scripts -->
   <script src="js/main.js?v=5"></script>
-  <script src="js/calculator.js?v=6"></script>
+  <script src="js/calculator.js?v=7"></script>
 </body>
 </html>

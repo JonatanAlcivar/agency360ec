@@ -68,6 +68,58 @@
     <xhtml:link rel="alternate" hreflang="en-US" href="https://disenoweb.agency/blog-en.html"/>
   </url>
 
+  <!-- Blog articles: Miami cluster (2026-10-09) -->
+  <url>
+    <loc>https://disenoweb.agency/blog/diseno-web-miami-es.html</loc>
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://disenoweb.agency/blog/diseno-web-miami-es.html"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://disenoweb.agency/blog/web-design-miami-en.html"/>
+  </url>
+  <url>
+    <loc>https://disenoweb.agency/blog/web-design-miami-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://disenoweb.agency/blog/diseno-web-miami-es.html"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://disenoweb.agency/blog/web-design-miami-en.html"/>
+  </url>
+  <url>
+    <loc>https://disenoweb.agency/blog/agencia-diseno-web-miami-es.html</loc>
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://disenoweb.agency/blog/agencia-diseno-web-miami-es.html"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://disenoweb.agency/blog/web-design-agency-miami-en.html"/>
+  </url>
+  <url>
+    <loc>https://disenoweb.agency/blog/web-design-agency-miami-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://disenoweb.agency/blog/agencia-diseno-web-miami-es.html"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://disenoweb.agency/blog/web-design-agency-miami-en.html"/>
+  </url>
+  <url>
+    <loc>https://disenoweb.agency/blog/desarrollo-web-miami-es.html</loc>
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://disenoweb.agency/blog/desarrollo-web-miami-es.html"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://disenoweb.agency/blog/website-development-miami-en.html"/>
+  </url>
+  <url>
+    <loc>https://disenoweb.agency/blog/website-development-miami-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://disenoweb.agency/blog/desarrollo-web-miami-es.html"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://disenoweb.agency/blog/website-development-miami-en.html"/>
+  </url>
+  <url>
+    <loc>https://disenoweb.agency/blog/diseno-web-miami-beach-es.html</loc>
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://disenoweb.agency/blog/diseno-web-miami-beach-es.html"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://disenoweb.agency/blog/web-design-miami-beach-en.html"/>
+  </url>
+  <url>
+    <loc>https://disenoweb.agency/blog/web-design-miami-beach-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://disenoweb.agency/blog/diseno-web-miami-beach-es.html"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://disenoweb.agency/blog/web-design-miami-beach-en.html"/>
+  </url>
+  <url>
+    <loc>https://disenoweb.agency/blog/diseno-web-coral-gables-es.html</loc>
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://disenoweb.agency/blog/diseno-web-coral-gables-es.html"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://disenoweb.agency/blog/web-design-coral-gables-en.html"/>
+  </url>
+  <url>
+    <loc>https://disenoweb.agency/blog/web-design-coral-gables-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://disenoweb.agency/blog/diseno-web-coral-gables-es.html"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://disenoweb.agency/blog/web-design-coral-gables-en.html"/>
+  </url>
+
   <!-- Blog articles: each Spanish and English page links to its language alternate -->
   <url>
     <loc>https://disenoweb.agency/blog/sitio-web-bilingue-espanol-ingles-es.html</loc>
