@@ -96,7 +96,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/styles.css?v=23">
+  <link rel="stylesheet" href="css/styles.css?v=24">
 </head>
 <body>
 
@@ -172,23 +172,25 @@
   <section class="hero" id="inicio">
     <div class="container hero-grid">
       <div class="hero-content">
-        <!-- Badge de Escasez y Urgencia Viral -->
-        <div class="viral-spots-badge">
-          <div class="viral-pulse"></div>
-          <span data-i18n="hero_badge" data-es="Últimos 3 Cupos Disponibles Esta Semana (EE.UU. &amp; LATAM)" data-en="Last 3 Spots Available This Week (USA &amp; LATAM)">Last 3 Spots Available This Week (USA &amp; LATAM)</span>
+        <div class="hero-kicker">
+          <i class="fa-solid fa-sparkles" aria-hidden="true"></i>
+          <span data-i18n="hero_badge" data-es="Diseño web para negocios hispanos" data-en="Web design for Hispanic-owned businesses">Web design for Hispanic-owned businesses</span>
         </div>
 
-        <h1 data-i18n="hero_h1" data-es="Obtén un Sitio Web que <span class='gradient-text'>Genera Llamadas en 5 Días</span>" data-en="Get a Website that <span class='gradient-text'>Generates Calls in 5 Days</span>">Get a Website that <span class="gradient-text">Generates Calls in 5 Days</span></h1>
+        <h1 data-i18n="hero_h1" data-es="Tu próximo cliente te está buscando. <span class='gradient-text'>Haz que te encuentre.</span>" data-en="Your next customer is searching. <span class='gradient-text'>Make sure they find you.</span>">Your next customer is searching. <span class="gradient-text">Make sure they find you.</span></h1>
 
-        <p class="hero-subtitle" data-i18n="hero_subtitle" data-es="Desarrollamos páginas web profesionales de alta conversión para pequeños negocios en <strong>Miami, Houston, Nueva York y Latinoamérica</strong>. Sin contratos largos. 100% de garantía de entrega." data-en="We build high-conversion professional websites for small businesses in <strong>Miami, Houston, New York and Latin America</strong>. No long contracts. 100% delivery guarantee.">
-          We build high-conversion professional websites for small businesses in <strong>Miami, Houston, New York and Latin America</strong>. No long contracts. 100% delivery guarantee.
+        <p class="hero-subtitle" data-i18n="hero_subtitle" data-es="Creamos sitios claros y rápidos que explican lo que haces, generan confianza y facilitan el contacto. Diseñados para negocios locales y clientes que hablan español o inglés." data-en="We build clear, fast websites that explain what you do, earn trust, and make it easy to get in touch. Designed for local businesses and customers who speak English or Spanish.">
+          We build clear, fast websites that explain what you do, earn trust, and make it easy to get in touch. Designed for local businesses and customers who speak English or Spanish.
         </p>
 
-        <div style="display: flex; gap: 24px; font-size: 0.95rem; font-weight: 700; color: var(--primary);">
-          <span><i class="fa-solid fa-check" style="color: var(--accent-green);"></i> <span data-i18n="hero_feat1" data-es="Entrega en 5–7 días" data-en="Delivered in 5–7 days">Delivered in 5–7 days</span></span>
-          <span><i class="fa-solid fa-check" style="color: var(--accent-green);"></i> <span data-i18n="hero_feat2" data-es="Sin contratos complejos" data-en="No complex contracts">No complex contracts</span></span>
-          <span><i class="fa-solid fa-check" style="color: var(--accent-green);"></i> <span data-i18n="hero_feat3" data-es="Soporte en Español" data-en="Spanish &amp; English Support">Spanish &amp; English Support</span></span>
+        <div class="hero-actions">
+          <a href="#cotizador" class="btn btn-primary">
+            <span data-es="Hablemos de tu proyecto" data-en="Let's talk about your project">Let's talk about your project</span>
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+          <a href="#portafolio" class="btn btn-secondary" data-es="Ver proyectos" data-en="Explore our work">Explore our work</a>
         </div>
+        <p class="hero-cta-note" data-es="Cuéntanos qué necesitas y te orientamos sin compromiso." data-en="Tell us what you need. We’ll help you find the right next step.">Tell us what you need. We’ll help you find the right next step.</p>
       </div>
 
       <!-- Free Website Diagnosis Widget (Lead-capture quiz) -->
@@ -198,8 +200,8 @@
             <i class="fa-solid fa-clipboard-check" style="color: var(--accent-gold);"></i>
           </div>
           <div>
-            <h3>Free Website Diagnosis in 30 Seconds</h3>
-            <p>Answer 5 quick questions and find out how visible your business is online:</p>
+            <h3 data-i18n="quote_title">What could help more customers find you?</h3>
+            <p data-i18n="quote_subtitle">Answer 5 quick questions and get a starting point to improve your online presence.</p>
           </div>
         </div>
 
@@ -602,9 +604,9 @@
   <section class="section" id="cotizador">
     <div class="container">
       <div class="section-header text-center">
-        <span class="badge">Presupuesto en Tiempo Real</span>
-        <h2>Interactive Project Calculator</h2>
-        <p>Pick a package, add the services you need, and see the exact price instantly.</p>
+        <span class="badge">Built around your business</span>
+        <h2>Build a website that works for your business</h2>
+        <p>Choose the best starting point. See one clear total, then customize only if you need to.</p>
       </div>
 
       <div class="calc-bento-grid">
@@ -666,7 +668,11 @@
             <span class="option-price">$1,499 USD</span>
           </div>
 
-          <h4 class="calc-step-title calc-step-title-spaced"><i class="fa-solid fa-puzzle-piece"></i> 2. Additional Services</h4>
+          <details class="calc-addons-disclosure">
+            <summary>
+              <span class="calc-addons-summary-title"><i class="fa-solid fa-puzzle-piece" aria-hidden="true"></i> Optional services</span>
+              <span class="calc-addons-summary-hint">Customize your project if you need to</span>
+            </summary>
 
           <div class="calc-option addon-option">
             <div class="calc-option-info">
@@ -766,6 +772,7 @@
             </div>
             <span class="option-price">+$99 USD</span>
           </div>
+          </details>
         </div>
 
         <div class="calc-summary-card">
@@ -773,7 +780,7 @@
             <h3 class="calc-summary-title"><i class="fa-solid fa-receipt"></i> Quote Summary</h3>
             <div class="calc-summary-row">
               <span class="calc-summary-label">Selected Package</span>
-              <span class="calc-summary-value" id="calc-plan-summary">Basic Landing Page ($299)</span>
+              <span class="calc-summary-value" id="calc-plan-summary">Basic Landing Page</span>
             </div>
             <div class="calc-summary-row">
               <span class="calc-summary-label">Add-ons</span>
@@ -876,6 +883,6 @@
 
   <!-- Scripts -->
   <script src="js/main.js?v=5"></script>
-  <script src="js/calculator.js?v=7"></script>
+  <script src="js/calculator.js?v=8"></script>
 </body>
 </html>
