@@ -67,6 +67,16 @@
     <xhtml:link rel="alternate" hreflang="es-US" href="https://disenoweb.agency/blog.html"/>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://disenoweb.agency/blog-en.html"/>
   </url>
+  <url>
+    <loc>https://disenoweb.agency/blog-pagina-2.html</loc>
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://disenoweb.agency/blog-pagina-2.html"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://disenoweb.agency/blog-en-pagina-2.html"/>
+  </url>
+  <url>
+    <loc>https://disenoweb.agency/blog-en-pagina-2.html</loc>
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://disenoweb.agency/blog-pagina-2.html"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://disenoweb.agency/blog-en-pagina-2.html"/>
+  </url>
 
   <!-- Blog articles: Miami cluster (2026-10-09) -->
   <url>
@@ -220,5 +230,96 @@
     <loc>https://disenoweb.agency/blog/local-seo-small-business-guide-en.html</loc>
     <xhtml:link rel="alternate" hreflang="es-US" href="https://disenoweb.agency/blog/seo-local-pequenos-negocios-guia-es.html"/>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://disenoweb.agency/blog/local-seo-small-business-guide-en.html"/>
+  </url>
+  <!-- New bilingual guides (2026-10-12) -->
+  <url>
+    <loc>https://disenoweb.agency/blog/perfil-empresa-google-guia-es.html</loc>
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://disenoweb.agency/blog/perfil-empresa-google-guia-es.html"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://disenoweb.agency/blog/google-business-profile-optimization-guide-en.html"/>
+  </url>
+  <url>
+    <loc>https://disenoweb.agency/blog/google-business-profile-optimization-guide-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://disenoweb.agency/blog/perfil-empresa-google-guia-es.html"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://disenoweb.agency/blog/google-business-profile-optimization-guide-en.html"/>
+  </url>
+  <url>
+    <loc>https://disenoweb.agency/blog/negocio-servicio-area-google-maps-es.html</loc>
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://disenoweb.agency/blog/negocio-servicio-area-google-maps-es.html"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://disenoweb.agency/blog/service-area-business-google-maps-en.html"/>
+  </url>
+  <url>
+    <loc>https://disenoweb.agency/blog/service-area-business-google-maps-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://disenoweb.agency/blog/negocio-servicio-area-google-maps-es.html"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://disenoweb.agency/blog/service-area-business-google-maps-en.html"/>
+  </url>
+  <url>
+    <loc>https://disenoweb.agency/blog/negocio-no-aparece-busqueda-local-es.html</loc>
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://disenoweb.agency/blog/negocio-no-aparece-busqueda-local-es.html"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://disenoweb.agency/blog/business-not-showing-local-search-en.html"/>
+  </url>
+  <url>
+    <loc>https://disenoweb.agency/blog/business-not-showing-local-search-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://disenoweb.agency/blog/negocio-no-aparece-busqueda-local-es.html"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://disenoweb.agency/blog/business-not-showing-local-search-en.html"/>
+  </url>
+  <url>
+    <loc>https://disenoweb.agency/blog/como-pedir-resenas-google-responder-es.html</loc>
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://disenoweb.agency/blog/como-pedir-resenas-google-responder-es.html"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://disenoweb.agency/blog/how-to-get-and-respond-to-google-reviews-en.html"/>
+  </url>
+  <url>
+    <loc>https://disenoweb.agency/blog/how-to-get-and-respond-to-google-reviews-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://disenoweb.agency/blog/como-pedir-resenas-google-responder-es.html"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://disenoweb.agency/blog/how-to-get-and-respond-to-google-reviews-en.html"/>
+  </url>
+  <url>
+    <loc>https://disenoweb.agency/blog/pagina-web-solicitudes-presupuesto-es.html</loc>
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://disenoweb.agency/blog/pagina-web-solicitudes-presupuesto-es.html"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://disenoweb.agency/blog/website-that-generates-estimate-requests-en.html"/>
+  </url>
+  <url>
+    <loc>https://disenoweb.agency/blog/website-that-generates-estimate-requests-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://disenoweb.agency/blog/pagina-web-solicitudes-presupuesto-es.html"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://disenoweb.agency/blog/website-that-generates-estimate-requests-en.html"/>
+  </url>
+  <url>
+    <loc>https://disenoweb.agency/blog/pagina-sobre-nosotros-negocio-es.html</loc>
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://disenoweb.agency/blog/pagina-sobre-nosotros-negocio-es.html"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://disenoweb.agency/blog/small-business-about-us-page-guide-en.html"/>
+  </url>
+  <url>
+    <loc>https://disenoweb.agency/blog/small-business-about-us-page-guide-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://disenoweb.agency/blog/pagina-sobre-nosotros-negocio-es.html"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://disenoweb.agency/blog/small-business-about-us-page-guide-en.html"/>
+  </url>
+  <url>
+    <loc>https://disenoweb.agency/blog/formulario-llamada-whatsapp-negocio-es.html</loc>
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://disenoweb.agency/blog/formulario-llamada-whatsapp-negocio-es.html"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://disenoweb.agency/blog/contact-form-phone-or-whatsapp-en.html"/>
+  </url>
+  <url>
+    <loc>https://disenoweb.agency/blog/contact-form-phone-or-whatsapp-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://disenoweb.agency/blog/formulario-llamada-whatsapp-negocio-es.html"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://disenoweb.agency/blog/contact-form-phone-or-whatsapp-en.html"/>
+  </url>
+  <url>
+    <loc>https://disenoweb.agency/blog/checklist-web-movil-negocio-es.html</loc>
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://disenoweb.agency/blog/checklist-web-movil-negocio-es.html"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://disenoweb.agency/blog/small-business-mobile-website-checklist-en.html"/>
+  </url>
+  <url>
+    <loc>https://disenoweb.agency/blog/small-business-mobile-website-checklist-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://disenoweb.agency/blog/checklist-web-movil-negocio-es.html"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://disenoweb.agency/blog/small-business-mobile-website-checklist-en.html"/>
+  </url>
+  <url>
+    <loc>https://disenoweb.agency/blog/clinica-citas-online-sitio-web-es.html</loc>
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://disenoweb.agency/blog/clinica-citas-online-sitio-web-es.html"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://disenoweb.agency/blog/clinic-website-online-appointments-en.html"/>
+  </url>
+  <url>
+    <loc>https://disenoweb.agency/blog/clinic-website-online-appointments-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://disenoweb.agency/blog/clinica-citas-online-sitio-web-es.html"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://disenoweb.agency/blog/clinic-website-online-appointments-en.html"/>
   </url>
 </urlset>

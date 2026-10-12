@@ -96,7 +96,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/styles.css?v=22">
+  <link rel="stylesheet" href="css/styles.css?v=23">
 </head>
 <body>
 
@@ -183,10 +183,30 @@
           Desarrollamos páginas web profesionales de alta conversión para pequeños negocios en <strong>Miami, Houston, Nueva York y Latinoamérica</strong>. Sin contratos largos. 100% de garantía de entrega.
         </p>
 
-        <div style="display: flex; gap: 24px; font-size: 0.95rem; font-weight: 700; color: var(--primary);">
-          <span><i class="fa-solid fa-check" style="color: var(--accent-green);"></i> <span data-i18n="hero_feat1" data-es="Entrega en 5–7 días" data-en="Delivered in 5–7 days">Entrega en 5–7 días</span></span>
-          <span><i class="fa-solid fa-check" style="color: var(--accent-green);"></i> <span data-i18n="hero_feat2" data-es="Sin contratos complejos" data-en="No complex contracts">Sin contratos complejos</span></span>
-          <span><i class="fa-solid fa-check" style="color: var(--accent-green);"></i> <span data-i18n="hero_feat3" data-es="Soporte en Español" data-en="Spanish &amp; English Support">Soporte en Español</span></span>
+        <div class="hero-trust-bar" aria-label="Indicadores de confianza del servicio">
+          <span class="trust-badge"><i class="fa-solid fa-bolt"></i> <span>Entrega en 5–7 días</span></span>
+          <span class="trust-badge muted"><i class="fa-solid fa-shield-heart"></i> <span>100% de garantía</span></span>
+        </div>
+
+        <div class="hero-stats" aria-label="Estadísticas de desempeño">
+          <div class="hero-stat">
+            <strong>+250</strong>
+            <span>sitios entregados</span>
+          </div>
+          <div class="hero-stat">
+            <strong>4.9/5</strong>
+            <span>calificación promedio</span>
+          </div>
+          <div class="hero-stat">
+            <strong>24/7</strong>
+            <span>soporte en español</span>
+          </div>
+        </div>
+
+        <div class="hero-feature-row" aria-label="Beneficios del servicio">
+          <span><i class="fa-solid fa-check"></i> <span data-i18n="hero_feat1" data-es="Entrega en 5–7 días" data-en="Delivered in 5–7 days">Entrega en 5–7 días</span></span>
+          <span><i class="fa-solid fa-check"></i> <span data-i18n="hero_feat2" data-es="Sin contratos complejos" data-en="No complex contracts">Sin contratos complejos</span></span>
+          <span><i class="fa-solid fa-check"></i> <span data-i18n="hero_feat3" data-es="Soporte en Español" data-en="Spanish &amp; English Support">Soporte en Español</span></span>
         </div>
       </div>
 
@@ -649,125 +669,134 @@
           </div>
 
           <div class="calc-option plan-option" data-price-usa="799" data-price-latam="799" data-price="799" data-name="Pack Campaña">
-            <div>
-              <span style="font-weight: 700; display: block;">Pack Campaña</span>
-              <span style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; display: block; margin-top: 4px;">Incluye: landing page y configuración inicial para lanzar tu campaña digital.</span>
+            <div class="calc-option-info">
+              <span class="calc-option-icon"><i class="fa-solid fa-bullhorn"></i></span>
+              <div>
+                <span class="calc-option-name">Pack Campaña</span>
+                <span class="calc-option-desc">Incluye: landing page y configuración inicial para lanzar tu campaña digital.</span>
+              </div>
             </div>
             <span class="option-price">$799 USD</span>
           </div>
 
           <div class="calc-option plan-option" data-price-usa="999" data-price-latam="999" data-price="999" data-name="Sitio Corporativo">
-            <div>
-              <span style="font-weight: 700; display: block;">Sitio Corporativo</span>
-              <span style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; display: block; margin-top: 4px;">Incluye: sitio de varias secciones, formularios de contacto y diseño adaptable.</span>
+            <div class="calc-option-info">
+              <span class="calc-option-icon"><i class="fa-solid fa-building"></i></span>
+              <div>
+                <span class="calc-option-name">Sitio Corporativo</span>
+                <span class="calc-option-desc">Incluye: sitio de varias secciones, formularios de contacto y diseño adaptable.</span>
+              </div>
             </div>
             <span class="option-price">$999 USD</span>
           </div>
 
           <div class="calc-option plan-option" data-price-usa="1499" data-price-latam="1499" data-price="1499" data-name="Tienda Online">
-            <div>
-              <span style="font-weight: 700; display: block;">Tienda Online</span>
-              <span style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; display: block; margin-top: 4px;">Incluye: catálogo de productos, carrito y flujo para recibir pedidos.</span>
+            <div class="calc-option-info">
+              <span class="calc-option-icon"><i class="fa-solid fa-store"></i></span>
+              <div>
+                <span class="calc-option-name">Tienda Online</span>
+                <span class="calc-option-desc">Incluye: catálogo de productos, carrito y flujo para recibir pedidos.</span>
+              </div>
             </div>
             <span class="option-price">$1,499 USD</span>
           </div>
 
-          <h4 style="color: var(--primary); margin: 30px 0 20px 0;"><i class="fa-solid fa-puzzle-piece"></i> 2. Servicios Adicionales</h4>
+          <h4 class="calc-step-title calc-step-title-spaced"><i class="fa-solid fa-puzzle-piece"></i> 2. Servicios Adicionales</h4>
 
-          <div class="calc-option">
-            <div style="display: flex; align-items: flex-start; gap: 12px;">
+          <div class="calc-option addon-option">
+            <div class="calc-option-info">
               <input type="checkbox" class="addon-checkbox" data-price-usa="99" data-price-latam="69" data-price="99" data-name="Branding & Logo Profesional" style="margin-top: 4px;">
               <div>
-                <span style="font-weight: 600; display: block;">Branding & Logo Profesional</span>
-                <span style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; display: block; margin-top: 2px;">Incluye: una propuesta de logotipo, dos revisiones y archivos digitales finales.</span>
+                <span class="calc-option-name">Branding & Logo Profesional</span>
+                <span class="calc-option-desc">Incluye: una propuesta de logotipo, dos revisiones y archivos digitales finales.</span>
               </div>
             </div>
             <span class="option-price">+$99 USD</span>
           </div>
 
-          <div class="calc-option">
-            <div style="display: flex; align-items: flex-start; gap: 12px;">
+          <div class="calc-option addon-option">
+            <div class="calc-option-info">
               <input type="checkbox" class="addon-checkbox" data-price-usa="120" data-price-latam="69" data-price="120" data-name="Campaña Ads (Google/Meta)" style="margin-top: 4px;">
               <div>
-                <span style="font-weight: 600; display: block;">Campaña de anuncios</span>
-                <span style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; display: block; margin-top: 2px;">Incluye: configuración de una campaña en Google o Meta. No incluye presupuesto publicitario ni administración mensual.</span>
+                <span class="calc-option-name">Campaña de anuncios</span>
+                <span class="calc-option-desc">Incluye: configuración de una campaña en Google o Meta. No incluye presupuesto publicitario ni administración mensual.</span>
               </div>
             </div>
             <span class="option-price">+$120 USD</span>
           </div>
 
-          <div class="calc-option">
-            <div style="display: flex; align-items: flex-start; gap: 12px;">
+          <div class="calc-option addon-option">
+            <div class="calc-option-info">
               <input type="checkbox" class="addon-checkbox" data-price-usa="79" data-price-latam="59" data-price="79" data-name="Configuración de Perfil de Negocio de Google" style="margin-top: 4px;">
               <div>
-                <span style="font-weight: 600; display: block;">Configuración de Perfil de Negocio de Google</span>
-                <span style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; display: block; margin-top: 2px;">Configuración o revisión inicial de tu perfil. Crear el perfil de Google es gratis.</span>
+                <span class="calc-option-name">Configuración de Perfil de Negocio de Google</span>
+                <span class="calc-option-desc">Configuración o revisión inicial de tu perfil. Crear el perfil de Google es gratis.</span>
               </div>
             </div>
             <span class="option-price">+$79 USD</span>
           </div>
 
-          <div class="calc-option">
-            <div style="display: flex; align-items: flex-start; gap: 12px;">
+          <div class="calc-option addon-option">
+            <div class="calc-option-info">
               <input type="checkbox" class="addon-checkbox" data-price-usa="149" data-price-latam="99" data-price="149" data-name="SEO Local Inicial" style="margin-top: 4px;">
               <div>
-                <span style="font-weight: 600; display: block;">SEO Local Inicial</span>
-                <span style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; display: block; margin-top: 2px;">Revisión local y optimización inicial de una página; no se garantizan posiciones.</span>
+                <span class="calc-option-name">SEO Local Inicial</span>
+                <span class="calc-option-desc">Revisión local y optimización inicial de una página; no se garantizan posiciones.</span>
               </div>
             </div>
             <span class="option-price">+$149 USD</span>
           </div>
 
-          <div class="calc-option">
-            <div style="display: flex; align-items: flex-start; gap: 12px;">
+          <div class="calc-option addon-option">
+            <div class="calc-option-info">
               <input type="checkbox" class="addon-checkbox" data-price-usa="80" data-price-latam="99" data-price="80" data-name="Automatización Básica de WhatsApp" style="margin-top: 4px;">
               <div>
-                <span style="font-weight: 600; display: block;">Automatización Básica de WhatsApp</span>
-                <span style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; display: block; margin-top: 2px;">Incluye: flujo inicial de respuestas automáticas. Licencias y cargos de plataforma se cobran aparte.</span>
+                <span class="calc-option-name">Automatización Básica de WhatsApp</span>
+                <span class="calc-option-desc">Incluye: flujo inicial de respuestas automáticas. Licencias y cargos de plataforma se cobran aparte.</span>
               </div>
             </div>
-            <span class="option-price">+$149 USD</span>
+            <span class="option-price">+$80 USD</span>
           </div>
 
-          <div class="calc-option">
-            <div style="display: flex; align-items: flex-start; gap: 12px;">
+          <div class="calc-option addon-option">
+            <div class="calc-option-info">
               <input type="checkbox" class="addon-checkbox" data-price-usa="150" data-price-latam="99" data-price="150" data-name="Video UGC (1 video)" style="margin-top: 4px;">
               <div>
-                <span style="font-weight: 600; display: block;">Creación de Video UGC</span>
-                <span style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; display: block; margin-top: 2px;">Un video para promocionar tu negocio. Derechos de uso extendido y material sin editar se cotizan aparte.</span>
+                <span class="calc-option-name">Creación de Video UGC</span>
+                <span class="calc-option-desc">Un video para promocionar tu negocio. Derechos de uso extendido y material sin editar se cotizan aparte.</span>
               </div>
             </div>
             <span class="option-price">+$150 USD</span>
           </div>
 
-          <div class="calc-option">
-            <div style="display: flex; align-items: flex-start; gap: 12px;">
+          <div class="calc-option addon-option">
+            <div class="calc-option-info">
               <input type="checkbox" class="addon-checkbox" data-price-usa="99" data-price-latam="69" data-price="99" data-name="Formulario de Contacto y Correo Automático" style="margin-top: 4px;">
               <div>
-                <span style="font-weight: 600; display: block;">Formulario de Contacto y Correo Automático</span>
-                <span style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; display: block; margin-top: 2px;">Incluye: formulario y un correo de confirmación. La suscripción de la plataforma no está incluida.</span>
+                <span class="calc-option-name">Formulario de Contacto y Correo Automático</span>
+                <span class="calc-option-desc">Incluye: formulario y un correo de confirmación. La suscripción de la plataforma no está incluida.</span>
               </div>
             </div>
             <span class="option-price">+$99 USD</span>
           </div>
 
-          <div class="calc-option">
-            <div style="display: flex; align-items: flex-start; gap: 12px;">
+          <div class="calc-option addon-option">
+            <div class="calc-option-info">
               <input type="checkbox" class="addon-checkbox" data-price-usa="39" data-price-latam="29" data-price="39" data-billing-cycle="monthly" data-name="Mantenimiento Web Esencial" style="margin-top: 4px;">
               <div>
-                <span style="font-weight: 600; display: block;">Mantenimiento Web Esencial</span>
-                <span style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; display: block; margin-top: 2px;">Mensual: revisión y cambios pequeños limitados. Dominio, hosting y cambios grandes se cobran aparte.</span>
+                <span class="calc-option-name">Mantenimiento Web Esencial</span>
+                <span class="calc-option-desc">Mensual: revisión y cambios pequeños limitados. Dominio, hosting y cambios grandes se cobran aparte.</span>
               </div>
             </div>
             <span class="option-price">+$39 USD / mes</span>
           </div>
 
-          <div class="calc-option">
-            <div style="display: flex; align-items: flex-start; gap: 12px;">
+          <div class="calc-option addon-option">
+            <div class="calc-option-info">
               <input type="checkbox" class="addon-checkbox" data-price-usa="99" data-price-latam="69" data-price="99" data-name="Revisión de Velocidad Web" style="margin-top: 4px;">
               <div>
-                <span style="font-weight: 600; display: block;">Revisión de Velocidad Web</span>
-                <span style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; display: block; margin-top: 2px;">Diagnóstico y ajustes iniciales de alcance limitado; los resultados dependen del sitio y su alojamiento.</span>
+                <span class="calc-option-name">Revisión de Velocidad Web</span>
+                <span class="calc-option-desc">Diagnóstico y ajustes iniciales de alcance limitado; los resultados dependen del sitio y su alojamiento.</span>
               </div>
             </div>
             <span class="option-price">+$99 USD</span>
@@ -776,18 +805,22 @@
 
         <div class="calc-summary-card">
           <div>
-            <h3 style="font-size: 1.4rem; margin-bottom: 16px;"><i class="fa-solid fa-receipt gradient-text"></i> Resumen de Cotización</h3>
-            <div style="font-size: 0.85rem; color: #cfddd3; margin-bottom: 6px;">Paquete Seleccionado:</div>
-            <div id="calc-plan-summary" style="font-weight: 800; color: #fff; margin-bottom: 16px;">Landing Básica ($299)</div>
-            
-            <div style="font-size: 0.85rem; color: #cfddd3; margin-bottom: 6px;">Adicionales:</div>
-            <div id="calc-addons-summary" style="font-size: 0.85rem; color: #b3ddc1;">Sin adicionales seleccionados</div>
+            <h3 class="calc-summary-title"><i class="fa-solid fa-receipt"></i> Resumen de Cotización</h3>
+            <div class="calc-summary-row">
+              <span class="calc-summary-label">Paquete seleccionado</span>
+              <span class="calc-summary-value" id="calc-plan-summary">Landing Básica ($299)</span>
+            </div>
+            <div class="calc-summary-row">
+              <span class="calc-summary-label">Adicionales</span>
+              <span class="calc-summary-value calc-summary-value-sm" id="calc-addons-summary">Sin adicionales seleccionados</span>
+            </div>
           </div>
 
           <div>
             <div class="calc-total-box">
-              <span class="calc-total-label">Inversión inicial estimada</span>
+              <span class="calc-total-label">Inversión estimada</span>
               <div class="calc-total-price" id="calc-total-display">$299</div>
+              <div class="calc-total-note">USD · pago único</div>
               <div id="calc-recurring-display" class="calc-recurring-display" style="display: none;"></div>
             </div>
 

@@ -63,8 +63,31 @@
 
 .blog-list {
   display: grid;
+  gap: 34px;
+}
+
+.blog-category-group {
+  display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 22px;
+}
+
+.blog-category-title {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding-bottom: 12px;
+  color: #173d30;
+  border-bottom: 1px solid #d9e4da;
+  font-size: 1.55rem;
+}
+
+.blog-card-image {
+  display: block;
+  width: calc(100% + 56px);
+  height: 190px;
+  margin: -28px -28px 22px;
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  object-fit: cover;
 }
 
 .blog-card {
@@ -76,6 +99,43 @@
   border: 1px solid #e3e9e2;
   border-radius: var(--radius-xl);
   box-shadow: 0 10px 30px rgba(34, 57, 41, .045);
+}
+
+.blog-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 38px;
+}
+
+.blog-pagination a,
+.blog-pagination span {
+  display: inline-flex;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px;
+  color: #176b4d;
+  background: #fff;
+  border: 1px solid #d7e3d8;
+  border-radius: 999px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.blog-pagination [aria-current="page"] {
+  color: #fff;
+  background: #176b4d;
+  border-color: #176b4d;
+}
+
+.blog-pagination a:hover,
+.blog-pagination a:focus-visible {
+  border-color: #176b4d;
+  outline-offset: 3px;
 }
 
 .blog-card-category,
@@ -202,6 +262,19 @@
     grid-template-columns: 1fr;
   }
 
+  .blog-category-group {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .blog-category-title {
+    font-size: 1.3rem;
+  }
+
+  .blog-card-image {
+    height: 180px;
+  }
+
   .blog-post {
     padding: 26px 22px;
   }
@@ -222,4 +295,66 @@
 .blog-card-icon svg {
   width: 22px;
   height: 22px;
+}
+
+body.adblock-wall-active {
+  overflow: hidden;
+}
+
+body.adblock-wall-active > :not(#adblock-wall) {
+  visibility: hidden;
+}
+
+#adblock-wall {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(13, 30, 23, .96);
+  visibility: visible;
+}
+
+.adblock-wall-panel {
+  width: min(100%, 540px);
+  padding: 44px;
+  color: #17251e;
+  background: #fff;
+  border: 1px solid #dce7dd;
+  border-radius: var(--radius-xl);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, .3);
+  text-align: center;
+}
+
+.adblock-wall-icon {
+  display: inline-grid;
+  width: 56px;
+  height: 56px;
+  margin-bottom: 18px;
+  place-items: center;
+  color: #176b4d;
+  background: #e8f3ec;
+  border-radius: 50%;
+  font-size: 1.7rem;
+  font-weight: 900;
+}
+
+.adblock-wall-panel h1 {
+  margin-bottom: 12px;
+  color: #17251e;
+  font-size: clamp(1.6rem, 5vw, 2rem);
+  line-height: 1.2;
+}
+
+.adblock-wall-panel p {
+  margin-bottom: 24px;
+  color: #627168;
+  line-height: 1.7;
+}
+
+@media (max-width: 480px) {
+  .adblock-wall-panel {
+    padding: 32px 24px;
+  }
 }
